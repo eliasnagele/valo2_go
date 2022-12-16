@@ -31,12 +31,14 @@
             this.bt_home = new System.Windows.Forms.Button();
             this.bt_exit = new System.Windows.Forms.Button();
             this.tb_search = new System.Windows.Forms.TextBox();
-            this.lb_headline = new System.Windows.Forms.Label();
+            this.lb_Skins = new System.Windows.Forms.Label();
+            this.dtv_skins = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_skins)).BeginInit();
             this.SuspendLayout();
             // 
             // bt_home
             // 
-            this.bt_home.Location = new System.Drawing.Point(54, 55);
+            this.bt_home.Location = new System.Drawing.Point(12, 46);
             this.bt_home.Name = "bt_home";
             this.bt_home.Size = new System.Drawing.Size(75, 23);
             this.bt_home.TabIndex = 0;
@@ -46,7 +48,7 @@
             // 
             // bt_exit
             // 
-            this.bt_exit.Location = new System.Drawing.Point(54, 26);
+            this.bt_exit.Location = new System.Drawing.Point(12, 12);
             this.bt_exit.Name = "bt_exit";
             this.bt_exit.Size = new System.Drawing.Size(75, 23);
             this.bt_exit.TabIndex = 2;
@@ -61,27 +63,39 @@
             this.tb_search.Size = new System.Drawing.Size(100, 23);
             this.tb_search.TabIndex = 3;
             // 
-            // lb_headline
+            // lb_Skins
             // 
-            this.lb_headline.AutoSize = true;
-            this.lb_headline.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_headline.Location = new System.Drawing.Point(349, 46);
-            this.lb_headline.Name = "lb_headline";
-            this.lb_headline.Size = new System.Drawing.Size(130, 32);
-            this.lb_headline.TabIndex = 6;
-            this.lb_headline.Text = "Überschrift";
+            this.lb_Skins.AutoSize = true;
+            this.lb_Skins.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_Skins.Location = new System.Drawing.Point(364, 26);
+            this.lb_Skins.Name = "lb_Skins";
+            this.lb_Skins.Size = new System.Drawing.Size(69, 32);
+            this.lb_Skins.TabIndex = 6;
+            this.lb_Skins.Text = "Skins";
+            // 
+            // dtv_skins
+            // 
+            this.dtv_skins.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtv_skins.Location = new System.Drawing.Point(12, 88);
+            this.dtv_skins.Name = "dtv_skins";
+            this.dtv_skins.RowTemplate.Height = 25;
+            this.dtv_skins.Size = new System.Drawing.Size(776, 350);
+            this.dtv_skins.TabIndex = 7;
             // 
             // skins
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lb_headline);
+            this.Controls.Add(this.dtv_skins);
+            this.Controls.Add(this.lb_Skins);
             this.Controls.Add(this.tb_search);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_home);
             this.Name = "skins";
             this.Text = "skins";
+            this.Load += new System.EventHandler(this.skins_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_skins)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,6 +106,7 @@
         private Button bt_home;
         private Button bt_exit;
         private TextBox tb_search;
-        private Label lb_headline;
+        private Label lb_Skins;
+        private DataGridView dtv_skins;
     }
 }
