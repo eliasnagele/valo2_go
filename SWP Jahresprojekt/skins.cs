@@ -28,5 +28,10 @@ namespace SWP_Jahresprojekt
         {
             Environment.Exit(0);
         }
+
+        private void skins_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
