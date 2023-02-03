@@ -5,6 +5,8 @@ namespace SWP_Jahresprojekt
         public Form1()
         {
             InitializeComponent();
+
+            SQLInformation.CreateDB();
         }
 
         private void bt_tournament_Click(object sender, EventArgs e)
