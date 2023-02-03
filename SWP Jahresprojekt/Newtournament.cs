@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace SWP_Jahresprojekt
 {
-    public partial class tournament : Form
+    public partial class Newtournament : Form
     {
-        public tournament()
+        public Newtournament()
         {
             InitializeComponent();
+            tb_place.Hide();
+            lbl_place.Hide();
+        }
+
+        private void cb_lan_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_lan.Checked == true)
+            {
+                tb_place.Clear();
+                lbl_place.Show();
+                tb_place.Show();
+            }else if(cb_lan.Checked == false)
+            {
+                tb_place.Hide();
+                lbl_place.Hide();
+            }
         }
 
         private void bt_home_Click(object sender, EventArgs e)
@@ -28,22 +44,6 @@ namespace SWP_Jahresprojekt
         private void bt_exit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
-        }
-
-        private void btn_newtournament1_Click(object sender, EventArgs e)
-        {
-            Newtournament newtournament = new Newtournament();
-            this.Hide();
-            newtournament.ShowDialog();
-            this.Show();
-        }
-
-        private void btn_newtournament2_Click(object sender, EventArgs e)
-        {
-            Newtournament newtournament = new Newtournament();
-            this.Hide();
-            newtournament.ShowDialog();
-            this.Show();
         }
     }
 }
