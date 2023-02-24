@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bundles));
             this.bt_home = new System.Windows.Forms.Button();
             this.bt_exit = new System.Windows.Forms.Button();
-            this.tb_search = new System.Windows.Forms.TextBox();
             this.lb_bundle = new System.Windows.Forms.Label();
             this.pb_bundle1 = new System.Windows.Forms.PictureBox();
             this.pb_bundle4 = new System.Windows.Forms.PictureBox();
@@ -40,10 +40,13 @@
             this.tb_bundle4 = new System.Windows.Forms.TextBox();
             this.tb_bundle3 = new System.Windows.Forms.TextBox();
             this.tb_bundle2 = new System.Windows.Forms.TextBox();
+            this.pb_glass = new System.Windows.Forms.PictureBox();
+            this.tb_search = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_bundle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_bundle4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_bundle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_bundle3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).BeginInit();
             this.SuspendLayout();
             // 
             // bt_home
@@ -65,13 +68,6 @@
             this.bt_exit.Text = "Exit";
             this.bt_exit.UseVisualStyleBackColor = true;
             this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
-            // 
-            // tb_search
-            // 
-            this.tb_search.Location = new System.Drawing.Point(688, 12);
-            this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(100, 23);
-            this.tb_search.TabIndex = 3;
             // 
             // lb_bundle
             // 
@@ -147,11 +143,33 @@
             this.tb_bundle2.Size = new System.Drawing.Size(94, 23);
             this.tb_bundle2.TabIndex = 14;
             // 
+            // pb_glass
+            // 
+            this.pb_glass.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pb_glass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.BackgroundImage")));
+            this.pb_glass.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.InitialImage")));
+            this.pb_glass.Location = new System.Drawing.Point(635, 12);
+            this.pb_glass.Name = "pb_glass";
+            this.pb_glass.Size = new System.Drawing.Size(21, 20);
+            this.pb_glass.TabIndex = 16;
+            this.pb_glass.TabStop = false;
+            // 
+            // tb_search
+            // 
+            this.tb_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_search.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_search.Location = new System.Drawing.Point(651, 12);
+            this.tb_search.Name = "tb_search";
+            this.tb_search.Size = new System.Drawing.Size(137, 20);
+            this.tb_search.TabIndex = 15;
+            // 
             // Bundles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pb_glass);
+            this.Controls.Add(this.tb_search);
             this.Controls.Add(this.tb_bundle2);
             this.Controls.Add(this.tb_bundle3);
             this.Controls.Add(this.tb_bundle4);
@@ -161,7 +179,6 @@
             this.Controls.Add(this.pb_bundle4);
             this.Controls.Add(this.pb_bundle1);
             this.Controls.Add(this.lb_bundle);
-            this.Controls.Add(this.tb_search);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_home);
             this.Name = "Bundles";
@@ -170,6 +187,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_bundle4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_bundle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_bundle3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +197,6 @@
 
         private Button bt_home;
         private Button bt_exit;
-        private TextBox tb_search;
         private Label lb_bundle;
         private PictureBox pb_bundle1;
         private PictureBox pb_bundle4;
@@ -189,5 +206,7 @@
         private TextBox tb_bundle4;
         private TextBox tb_bundle3;
         private TextBox tb_bundle2;
+        private PictureBox pb_glass;
+        private TextBox tb_search;
     }
 }
