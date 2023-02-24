@@ -34,6 +34,7 @@
             this.bt_bundles = new System.Windows.Forms.Button();
             this.bt_exit = new System.Windows.Forms.Button();
             this.lb_headline = new System.Windows.Forms.Label();
+            this.btn_Login = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bt_tournament
@@ -96,11 +97,22 @@
             this.lb_headline.TabIndex = 5;
             this.lb_headline.Text = "Überschrift";
             // 
+            // btn_Login
+            // 
+            this.btn_Login.Location = new System.Drawing.Point(381, 327);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(75, 23);
+            this.btn_Login.TabIndex = 6;
+            this.btn_Login.Text = "Login";
+            this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.lb_headline);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_bundles);
@@ -111,6 +123,7 @@
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -121,5 +134,6 @@
         private Button bt_bundles;
         private Button bt_exit;
         private Label lb_headline;
+        private Button btn_Login;
     }
 }
