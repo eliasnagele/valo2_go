@@ -13,33 +13,45 @@ namespace SWP_Jahresprojekt
         {
             tournament tournament = new tournament();
             this.Hide();
-            tournament.Show();
+            tournament.ShowDialog();
+            this.Show();
         }
 
         private void bt_news_Click(object sender, EventArgs e)
         {
             news news = new news();
             this.Hide();
-            news.Show();
+            news.ShowDialog();
+            this.Show();
         }
 
         private void bt_skins_Click(object sender, EventArgs e)
         {
             skins skins = new skins();
             this.Hide();
-            skins.Show();
+            skins.ShowDialog();
+            this.Show();
         }
 
         private void bt_bundles_Click(object sender, EventArgs e)
         {
             Bundles Bundles = new Bundles();
             this.Hide();
-            Bundles.Show();
+            Bundles.ShowDialog();
+            this.Show();
         }
 
         private void bt_exit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+            this.Show();
         }
     }
 }
