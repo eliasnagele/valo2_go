@@ -122,6 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bt_EditTables);
             this.Controls.Add(this.btn_Login);
@@ -131,8 +132,14 @@
             this.Controls.Add(this.bt_skins);
             this.Controls.Add(this.bt_news);
             this.Controls.Add(this.bt_tournament);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Form1";
+            this.TransparencyKey = System.Drawing.Color.HotPink;
             this.ResumeLayout(false);
             this.PerformLayout();
 

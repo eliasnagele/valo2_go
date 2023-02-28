@@ -19,10 +19,7 @@ namespace SWP_Jahresprojekt
 
         private void bt_home_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
             this.Hide();
-            form1.ShowDialog();
-            this.Show();
         }
 
         private void bt_exit_Click(object sender, EventArgs e)

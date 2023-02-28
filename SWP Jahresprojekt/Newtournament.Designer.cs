@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.bt_exit = new System.Windows.Forms.Button();
-            this.bt_home = new System.Windows.Forms.Button();
+            this.bt_back = new System.Windows.Forms.Button();
             this.lb_headline = new System.Windows.Forms.Label();
             this.pb_mainpic = new System.Windows.Forms.PictureBox();
             this.lbl_name = new System.Windows.Forms.Label();
@@ -57,15 +57,15 @@
             this.bt_exit.UseVisualStyleBackColor = true;
             this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
-            // bt_home
+            // bt_back
             // 
-            this.bt_home.Location = new System.Drawing.Point(12, 31);
-            this.bt_home.Name = "bt_home";
-            this.bt_home.Size = new System.Drawing.Size(75, 23);
-            this.bt_home.TabIndex = 3;
-            this.bt_home.Text = "Home";
-            this.bt_home.UseVisualStyleBackColor = true;
-            this.bt_home.Click += new System.EventHandler(this.bt_home_Click);
+            this.bt_back.Location = new System.Drawing.Point(12, 31);
+            this.bt_back.Name = "bt_back";
+            this.bt_back.Size = new System.Drawing.Size(75, 23);
+            this.bt_back.TabIndex = 3;
+            this.bt_back.Text = "Back";
+            this.bt_back.UseVisualStyleBackColor = true;
+            this.bt_back.Click += new System.EventHandler(this.bt_back_Click);
             // 
             // lb_headline
             // 
@@ -119,9 +119,9 @@
             this.lbl_pricemoney.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_pricemoney.Location = new System.Drawing.Point(175, 319);
             this.lbl_pricemoney.Name = "lbl_pricemoney";
-            this.lbl_pricemoney.Size = new System.Drawing.Size(74, 21);
+            this.lbl_pricemoney.Size = new System.Drawing.Size(92, 21);
             this.lbl_pricemoney.TabIndex = 11;
-            this.lbl_pricemoney.Text = "Preisgeld";
+            this.lbl_pricemoney.Text = "Pricemoney";
             // 
             // textBox2
             // 
@@ -138,9 +138,9 @@
             this.lbl_date.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_date.Location = new System.Drawing.Point(175, 366);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(57, 21);
+            this.lbl_date.Size = new System.Drawing.Size(42, 21);
             this.lbl_date.TabIndex = 13;
-            this.lbl_date.Text = "Datum";
+            this.lbl_date.Text = "Date";
             // 
             // textBox3
             // 
@@ -157,9 +157,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(418, 270);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 21);
+            this.label3.Size = new System.Drawing.Size(61, 21);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Name";
+            this.label3.Text = "Winner";
             // 
             // lbl_lan
             // 
@@ -186,9 +186,9 @@
             this.lbl_place.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_place.Location = new System.Drawing.Point(418, 366);
             this.lbl_place.Name = "lbl_place";
-            this.lbl_place.Size = new System.Drawing.Size(69, 21);
+            this.lbl_place.Size = new System.Drawing.Size(46, 21);
             this.lbl_place.TabIndex = 19;
-            this.lbl_place.Text = "Standort";
+            this.lbl_place.Text = "Place";
             // 
             // cb_lan
             // 
@@ -219,9 +219,14 @@
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.pb_mainpic);
             this.Controls.Add(this.lb_headline);
-            this.Controls.Add(this.bt_home);
+            this.Controls.Add(this.bt_back);
             this.Controls.Add(this.bt_exit);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Newtournament";
+            this.ShowIcon = false;
             this.Text = "+";
             ((System.ComponentModel.ISupportInitialize)(this.pb_mainpic)).EndInit();
             this.ResumeLayout(false);
@@ -232,7 +237,7 @@
         #endregion
 
         private Button bt_exit;
-        private Button bt_home;
+        private Button bt_back;
         private Label lb_headline;
         private PictureBox pb_mainpic;
         private Label lbl_name;

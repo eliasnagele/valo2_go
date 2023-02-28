@@ -12,8 +12,6 @@ namespace SWP_Jahresprojekt
     {
         public static SqlConnection conn = new SqlConnection(@"server = (localdb)\MSSQLLocalDB; Integrated Security = true;");
         public static SqlCommand cmd = new SqlCommand("", conn);
-        public static List<string> tables = new List<string>();
-        
 
 
         public static void CreateDB()
@@ -45,7 +43,6 @@ namespace SWP_Jahresprojekt
                 ex.ToString();
             }
         }
-
         public static void CreateTables()
         {
             try
@@ -88,5 +85,6 @@ namespace SWP_Jahresprojekt
 
             conn.Close();
         }
+
     }
 }

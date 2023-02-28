@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(skins));
             this.bt_home = new System.Windows.Forms.Button();
             this.bt_exit = new System.Windows.Forms.Button();
             this.tb_search = new System.Windows.Forms.TextBox();
             this.lb_Skins = new System.Windows.Forms.Label();
             this.dtv_skins = new System.Windows.Forms.DataGridView();
+            this.pb_glass = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_skins)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).BeginInit();
             this.SuspendLayout();
             // 
             // bt_home
@@ -58,9 +61,11 @@
             // 
             // tb_search
             // 
-            this.tb_search.Location = new System.Drawing.Point(688, 12);
+            this.tb_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_search.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_search.Location = new System.Drawing.Point(651, 12);
             this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(100, 23);
+            this.tb_search.Size = new System.Drawing.Size(137, 20);
             this.tb_search.TabIndex = 3;
             // 
             // lb_Skins
@@ -82,20 +87,38 @@
             this.dtv_skins.Size = new System.Drawing.Size(776, 350);
             this.dtv_skins.TabIndex = 7;
             // 
+            // pb_glass
+            // 
+            this.pb_glass.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pb_glass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.BackgroundImage")));
+            this.pb_glass.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.InitialImage")));
+            this.pb_glass.Location = new System.Drawing.Point(631, 12);
+            this.pb_glass.Name = "pb_glass";
+            this.pb_glass.Size = new System.Drawing.Size(21, 20);
+            this.pb_glass.TabIndex = 8;
+            this.pb_glass.TabStop = false;
+            // 
             // skins
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pb_glass);
             this.Controls.Add(this.dtv_skins);
             this.Controls.Add(this.lb_Skins);
             this.Controls.Add(this.tb_search);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_home);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "skins";
+            this.ShowIcon = false;
             this.Text = "skins";
             this.Load += new System.EventHandler(this.skins_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_skins)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,5 +131,6 @@
         private TextBox tb_search;
         private Label lb_Skins;
         private DataGridView dtv_skins;
+        private PictureBox pb_glass;
     }
 }
