@@ -13,6 +13,7 @@ namespace SWP_Jahresprojekt
         public static SqlConnection conn = new SqlConnection(@"server = (localdb)\MSSQLLocalDB; Integrated Security = true;");
         public static SqlCommand cmd = new SqlCommand("", conn);
 
+
         public static void CreateDB()
         {
             try
@@ -59,6 +60,30 @@ namespace SWP_Jahresprojekt
             {
                 ex.ToString();
             }
+        }
+
+        public static void ReadTables()
+        {
+            conn.Open();
+            cmd.CommandText = "select * from sys.tables;";
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    string item = reader[0].ToString();
+                    tables.Add(item);
+                }
+            }
+            conn.Close();
+        }
+
+        public static void FillDTV(string table)
+        {
+            conn.Open();
+
+            conn.Close();
         }
 
     }
