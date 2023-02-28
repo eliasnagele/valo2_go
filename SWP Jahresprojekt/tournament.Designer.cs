@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tournament));
             this.bt_home = new System.Windows.Forms.Button();
             this.bt_exit = new System.Windows.Forms.Button();
-            this.tb_search = new System.Windows.Forms.TextBox();
             this.lb_headline = new System.Windows.Forms.Label();
             this.btn_newtournament1 = new System.Windows.Forms.Button();
             this.btn_newtournament2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bt_home
@@ -57,13 +60,6 @@
             this.bt_exit.Text = "Exit";
             this.bt_exit.UseVisualStyleBackColor = true;
             this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
-            // 
-            // tb_search
-            // 
-            this.tb_search.Location = new System.Drawing.Point(688, 12);
-            this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(100, 23);
-            this.tb_search.TabIndex = 2;
             // 
             // lb_headline
             // 
@@ -102,21 +98,49 @@
             this.dataGridView1.Size = new System.Drawing.Size(772, 189);
             this.dataGridView1.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(630, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(651, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(137, 20);
+            this.textBox1.TabIndex = 12;
+            // 
             // tournament
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_newtournament2);
             this.Controls.Add(this.btn_newtournament1);
             this.Controls.Add(this.lb_headline);
-            this.Controls.Add(this.tb_search);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_home);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "tournament";
+            this.ShowIcon = false;
             this.Text = "tournament";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,10 +150,11 @@
 
         private Button bt_home;
         private Button bt_exit;
-        private TextBox tb_search;
         private Label lb_headline;
         private Button btn_newtournament1;
         private Button btn_newtournament2;
         private DataGridView dataGridView1;
+        private PictureBox pictureBox1;
+        private TextBox textBox1;
     }
 }

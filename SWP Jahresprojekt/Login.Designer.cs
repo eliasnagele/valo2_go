@@ -205,7 +205,12 @@
             this.Controls.Add(this.tb_ConfirmPasswordCA);
             this.Controls.Add(this.tb_PasswordCA);
             this.Controls.Add(this.tb_UsernameCa);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Login";
+            this.ShowIcon = false;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
