@@ -53,5 +53,13 @@ namespace SWP_Jahresprojekt
             login.ShowDialog();
             this.Show();
         }
+
+        private void bt_EditTables_Click(object sender, EventArgs e)
+        {
+            ChangeTable changetable = new ChangeTable();
+            this.Hide();
+            changetable.ShowDialog();
+            this.Show();
+        }
     }
 }
