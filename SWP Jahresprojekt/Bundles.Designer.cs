@@ -148,7 +148,7 @@
             this.pb_glass.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pb_glass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.BackgroundImage")));
             this.pb_glass.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.InitialImage")));
-            this.pb_glass.Location = new System.Drawing.Point(635, 12);
+            this.pb_glass.Location = new System.Drawing.Point(630, 12);
             this.pb_glass.Name = "pb_glass";
             this.pb_glass.Size = new System.Drawing.Size(21, 20);
             this.pb_glass.TabIndex = 16;
@@ -181,7 +181,12 @@
             this.Controls.Add(this.lb_bundle);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_home);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Bundles";
+            this.ShowIcon = false;
             this.Text = "Bundles";
             ((System.ComponentModel.ISupportInitialize)(this.pb_bundle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_bundle4)).EndInit();

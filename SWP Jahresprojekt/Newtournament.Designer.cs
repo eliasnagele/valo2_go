@@ -221,7 +221,12 @@
             this.Controls.Add(this.lb_headline);
             this.Controls.Add(this.bt_back);
             this.Controls.Add(this.bt_exit);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Newtournament";
+            this.ShowIcon = false;
             this.Text = "+";
             ((System.ComponentModel.ISupportInitialize)(this.pb_mainpic)).EndInit();
             this.ResumeLayout(false);

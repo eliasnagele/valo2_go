@@ -92,7 +92,7 @@
             this.pb_glass.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pb_glass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.BackgroundImage")));
             this.pb_glass.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.InitialImage")));
-            this.pb_glass.Location = new System.Drawing.Point(635, 12);
+            this.pb_glass.Location = new System.Drawing.Point(631, 12);
             this.pb_glass.Name = "pb_glass";
             this.pb_glass.Size = new System.Drawing.Size(21, 20);
             this.pb_glass.TabIndex = 8;
@@ -109,7 +109,12 @@
             this.Controls.Add(this.tb_search);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_home);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "skins";
+            this.ShowIcon = false;
             this.Text = "skins";
             this.Load += new System.EventHandler(this.skins_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_skins)).EndInit();

@@ -31,6 +31,12 @@
             this.bt_home = new System.Windows.Forms.Button();
             this.bt_exit = new System.Windows.Forms.Button();
             this.lb_headline = new System.Windows.Forms.Label();
+            this.tb_newsOne = new System.Windows.Forms.TextBox();
+            this.pb_newsOne = new System.Windows.Forms.PictureBox();
+            this.pb_newsTwo = new System.Windows.Forms.PictureBox();
+            this.tb_newsTwo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_newsOne)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_newsTwo)).BeginInit();
             this.SuspendLayout();
             // 
             // bt_home
@@ -63,16 +69,65 @@
             this.lb_headline.TabIndex = 6;
             this.lb_headline.Text = "Überschrift";
             // 
+            // tb_newsOne
+            // 
+            this.tb_newsOne.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tb_newsOne.Location = new System.Drawing.Point(38, 114);
+            this.tb_newsOne.Multiline = true;
+            this.tb_newsOne.Name = "tb_newsOne";
+            this.tb_newsOne.ReadOnly = true;
+            this.tb_newsOne.Size = new System.Drawing.Size(326, 148);
+            this.tb_newsOne.TabIndex = 7;
+            // 
+            // pb_newsOne
+            // 
+            this.pb_newsOne.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pb_newsOne.Location = new System.Drawing.Point(431, 114);
+            this.pb_newsOne.Name = "pb_newsOne";
+            this.pb_newsOne.Size = new System.Drawing.Size(326, 148);
+            this.pb_newsOne.TabIndex = 8;
+            this.pb_newsOne.TabStop = false;
+            // 
+            // pb_newsTwo
+            // 
+            this.pb_newsTwo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pb_newsTwo.Location = new System.Drawing.Point(431, 290);
+            this.pb_newsTwo.Name = "pb_newsTwo";
+            this.pb_newsTwo.Size = new System.Drawing.Size(326, 148);
+            this.pb_newsTwo.TabIndex = 10;
+            this.pb_newsTwo.TabStop = false;
+            // 
+            // tb_newsTwo
+            // 
+            this.tb_newsTwo.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tb_newsTwo.Location = new System.Drawing.Point(38, 290);
+            this.tb_newsTwo.Multiline = true;
+            this.tb_newsTwo.Name = "tb_newsTwo";
+            this.tb_newsTwo.ReadOnly = true;
+            this.tb_newsTwo.Size = new System.Drawing.Size(326, 148);
+            this.tb_newsTwo.TabIndex = 9;
+            // 
             // news
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pb_newsTwo);
+            this.Controls.Add(this.tb_newsTwo);
+            this.Controls.Add(this.pb_newsOne);
+            this.Controls.Add(this.tb_newsOne);
             this.Controls.Add(this.lb_headline);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_home);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "news";
+            this.ShowIcon = false;
             this.Text = "news";
+            ((System.ComponentModel.ISupportInitialize)(this.pb_newsOne)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_newsTwo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,5 +138,9 @@
         private Button bt_home;
         private Button bt_exit;
         private Label lb_headline;
+        private TextBox tb_newsOne;
+        private PictureBox pb_newsOne;
+        private PictureBox pb_newsTwo;
+        private TextBox tb_newsTwo;
     }
 }
