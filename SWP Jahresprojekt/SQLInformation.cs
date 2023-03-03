@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
 
@@ -12,6 +13,8 @@ namespace SWP_Jahresprojekt
     {
         public static SqlConnection conn = new SqlConnection(@"server = (localdb)\MSSQLLocalDB; Integrated Security = true;");
         public static SqlCommand cmd = new SqlCommand("", conn);
+        public static List<string> tables = new List<string>();
+        public static DataTable dt = new DataTable();
 
 
         public static void CreateDB()
@@ -50,9 +53,13 @@ namespace SWP_Jahresprojekt
                 conn.Open();
                 cmd.CommandText = "create table bundles (ID int not null primary key identity, Name nvarchar(100), Price int, Rarity nvarchar(100), Date nvarchar(100), Variants nvarchar(100))";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "create table skins (ID int not null primary key identity, Name nvarchar(100), Price int, Rarity nvarchar(100), Bundle-ID int)";
+                cmd.CommandText = "create table skins (ID int not null primary key identity, Name nvarchar(100), Price int, Rarity nvarchar(100), BundleID int)";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "create table competition (ID int not null primary key identity, Name nvarchar(100), PriceMoney int, FinalTeam1 nvarchar(100), FinalTeam2 nvarchar(100), Result nvarchar(100), Winner nvarchar(100), Date nvarchar(100))";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "create table login (ID int not null primary key identity, Username nvarchar(100), Password nvarchar(100), Admin int);";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "insert into login (Username, Password, Admin) values ('admin', 'admin', 1);";
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -64,6 +71,7 @@ namespace SWP_Jahresprojekt
 
         public static void ReadTables()
         {
+            conn.Close();
             conn.Open();
             cmd.CommandText = "select * from sys.tables;";
             SqlDataReader reader = cmd.ExecuteReader();
@@ -79,11 +87,21 @@ namespace SWP_Jahresprojekt
             conn.Close();
         }
 
-        public static void FillDTV(string table)
+        public static DataTable FillDTV(string table)
         {
             conn.Open();
-
+            cmd.CommandText = "select * from " + table;
+            dt.Load(cmd.ExecuteReader());
             conn.Close();
+            return dt;
+        }
+
+        public static void SaveTableChanges()
+        {
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+
+            sqlDataAdapter.Update(dt);
         }
 
     }

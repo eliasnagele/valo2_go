@@ -33,7 +33,13 @@ namespace SWP_Jahresprojekt
         {
             string table = cb_ChooseTable.Text;
 
-            SQLInformation.FillDTV(table);
+            DataTable dt = SQLInformation.FillDTV(table);
+            dtv_ChangeTable.DataSource = dt;
+        }
+
+        private void bt_SaveChanges_Click(object sender, EventArgs e)
+        {
+            SQLInformation.SaveTableChanges();
         }
     }
 }

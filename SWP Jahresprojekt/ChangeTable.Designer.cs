@@ -91,6 +91,7 @@
             this.bt_SaveChanges.TabIndex = 5;
             this.bt_SaveChanges.Text = "Save";
             this.bt_SaveChanges.UseVisualStyleBackColor = true;
+            this.bt_SaveChanges.Click += new System.EventHandler(this.bt_SaveChanges_Click);
             // 
             // ChangeTable
             // 
