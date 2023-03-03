@@ -154,6 +154,7 @@
             this.bt_Login.TabIndex = 17;
             this.bt_Login.Text = "Login";
             this.bt_Login.UseVisualStyleBackColor = true;
+            this.bt_Login.Click += new System.EventHandler(this.bt_Login_Click);
             // 
             // bt_ExitLogin
             // 
