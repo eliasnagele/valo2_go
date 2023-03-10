@@ -103,6 +103,19 @@ namespace SWP_Jahresprojekt
 
             sqlDataAdapter.Update(dt);
         }
+        public static void SkinsshowAll(DataTable dt)
+        {
+            try
+            {
+                conn.Close();
+                conn.Open();
+                cmd.CommandText = "SELECT * FROM skins";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+            }
+            catch (Exception ex) { ex.ToString(); }
+        }
 
     }
 }
