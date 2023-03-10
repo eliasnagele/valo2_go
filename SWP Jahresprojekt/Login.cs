@@ -12,6 +12,8 @@ namespace SWP_Jahresprojekt
 {
     public partial class Login : Form
     {
+        public static bool admin = false;
+
         public Login()
         {
             InitializeComponent();
@@ -25,6 +27,14 @@ namespace SWP_Jahresprojekt
         private void bt_HomeLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void bt_Login_Click(object sender, EventArgs e)
+        {
+            string username = tb_UsernameLogin.Text;
+            string password = tb_PasswordLogin.Text;
+
+            admin = true;
         }
     }
 }

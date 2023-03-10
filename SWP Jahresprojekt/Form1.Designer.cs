@@ -35,6 +35,7 @@
             this.bt_exit = new System.Windows.Forms.Button();
             this.lb_headline = new System.Windows.Forms.Label();
             this.btn_Login = new System.Windows.Forms.Button();
+            this.bt_EditTables = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bt_tournament
@@ -107,12 +108,23 @@
             this.btn_Login.UseVisualStyleBackColor = true;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
+            // bt_EditTables
+            // 
+            this.bt_EditTables.Location = new System.Drawing.Point(708, 12);
+            this.bt_EditTables.Name = "bt_EditTables";
+            this.bt_EditTables.Size = new System.Drawing.Size(80, 27);
+            this.bt_EditTables.TabIndex = 7;
+            this.bt_EditTables.Text = "Edit Tables";
+            this.bt_EditTables.UseVisualStyleBackColor = true;
+            this.bt_EditTables.Click += new System.EventHandler(this.bt_EditTables_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bt_EditTables);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.lb_headline);
             this.Controls.Add(this.bt_exit);
@@ -142,5 +154,6 @@
         private Button bt_exit;
         private Label lb_headline;
         private Button btn_Login;
+        private Button bt_EditTables;
     }
 }
