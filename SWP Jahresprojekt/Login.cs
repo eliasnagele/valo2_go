@@ -36,5 +36,17 @@ namespace SWP_Jahresprojekt
 
             admin = true;
         }
+
+        private void bt_CreateAccount_Click(object sender, EventArgs e)
+        {
+            string username = tb_UsernameCa.Text;
+            string password = tb_PasswordCA.Text;
+            string confirmpassword = tb_ConfirmPasswordCA.Text;
+
+            if(password == confirmpassword)
+            {
+                SQLInformation.AddUser(username, password);
+            }
+        }
     }
 }
