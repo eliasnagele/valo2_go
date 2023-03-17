@@ -13,6 +13,7 @@ namespace SWP_Jahresprojekt
     public partial class Login : Form
     {
         public static bool admin = false;
+        public static bool loggedin = false;
 
         public Login()
         {
@@ -31,8 +32,25 @@ namespace SWP_Jahresprojekt
 
         private void bt_Login_Click(object sender, EventArgs e)
         {
+            bool usernameexist = false;
+
             string username = tb_UsernameLogin.Text;
             string password = tb_PasswordLogin.Text;
+
+            usernameexist = SQLInformation.CheckIfUsernameExists(username);
+
+            if (usernameexist.Equals(true))
+            {
+                bool matchingpassword = SQLInformation.GetPassword(username, password);
+
+                if (matchingpassword.Equals(true))
+                {
+                    loggedin = true;
+                    MessageBox.Show("Login succesful");
+                }
+                else
+                    MessageBox.Show("Wrong username or password");
+            }
 
             admin = true;
         }
