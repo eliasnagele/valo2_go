@@ -122,9 +122,12 @@ namespace SWP_Jahresprojekt
 
         public static void AddUser(string username, string password)
         {
+            string salt = BCrypt.GenerateSalt();
+            string hashedpassword = BCrypt.HashPassword(password, salt);
+
             conn.Close();
             conn.Open();
-            cmd.CommandText = "insert into login(Username, Password) values ('" + username + "', '" + password + "');";
+            cmd.CommandText = "insert into login(Username, Password) values ('" + username + "', '" + hashedpassword + "');";
             cmd.ExecuteNonQuery();
             conn.Close();
         }
@@ -153,7 +156,81 @@ namespace SWP_Jahresprojekt
                 conn.Close();
 
 
+        public static bool CheckIfUsernameExists(string username)
+        {
+            bool usernameexist = false;
+
+            try
+            {
+                conn.Close();
+                conn.Open();
+                cmd.CommandText = "select * from login where Username = '" + username + "';";
+                SqlDataReader reader = cmd.ExecuteReader();
+                conn.Close();
+
+                if (reader.Equals(null))
+                    usernameexist = false;
+                else
+                    usernameexist = true;
+                return usernameexist;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return usernameexist;
+            } 
+        }
+
+        public static bool CheckIfUserIsAdmin(string username)
+        {
+            bool userisadmin = false;
+
+            try
+            {
+                conn.Close();
+                conn.Open();
+                cmd.CommandText = "select Admin from login where Username = '" + username + "';";
+
+                if (cmd.ExecuteNonQuery().Equals(1))
+                    userisadmin = true;
+
+                return userisadmin;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return userisadmin;
+            }
+        }
+
+        public static bool GetPassword(string username, string password)
+        {
+            try
+            {
+                conn.Close();
+                conn.Open();
+                cmd.CommandText = "select Password from login where username = '" + username + "';";
+
+                if (BCrypt.CheckPassword(password, cmd.ExecuteScalar().ToString()))
+                {
+                    conn.Close();
+                    return true;
+                }
+                else
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+
+
             }catch(Exception ex) { ex.ToString(); }
+
         }
     }
 }
