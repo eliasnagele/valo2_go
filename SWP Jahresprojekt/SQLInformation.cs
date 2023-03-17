@@ -39,6 +39,7 @@ namespace SWP_Jahresprojekt
                 else
                 {
                     conn.ConnectionString += " database = valo2_go;";
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -98,10 +99,32 @@ namespace SWP_Jahresprojekt
 
         public static void SaveTableChanges()
         {
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
             SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
 
             sqlDataAdapter.Update(dt);
+        }
+        public static void SkinsshowAll(DataTable dt)
+        {
+            try
+            {
+                conn.Close();
+                conn.Open();
+                cmd.CommandText = "SELECT * FROM skins";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+            }
+            catch (Exception ex) { ex.ToString(); }
+        }
+
+        public static void AddUser(string username, string password)
+        {
+            conn.Close();
+            conn.Open();
+            cmd.CommandText = "insert into login(Username, Password) values ('" + username + "', '" + password + "');";
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
     }

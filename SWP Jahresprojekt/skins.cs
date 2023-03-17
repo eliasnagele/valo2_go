@@ -15,6 +15,9 @@ namespace SWP_Jahresprojekt
         public skins()
         {
             InitializeComponent();
+            DataTable dt = new DataTable();
+            SQLInformation.SkinsshowAll(dt);
+            dtv_skins.DataSource = dt;
         }
 
         private void bt_home_Click(object sender, EventArgs e)

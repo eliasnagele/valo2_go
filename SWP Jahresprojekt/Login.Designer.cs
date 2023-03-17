@@ -174,6 +174,7 @@
             this.bt_CreateAccount.TabIndex = 20;
             this.bt_CreateAccount.Text = "Create";
             this.bt_CreateAccount.UseVisualStyleBackColor = true;
+            this.bt_CreateAccount.Click += new System.EventHandler(this.bt_CreateAccount_Click);
             // 
             // bt_HomeLogin
             // 
