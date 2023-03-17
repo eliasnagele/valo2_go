@@ -15,7 +15,7 @@ namespace SWP_Jahresprojekt
         public static SqlCommand cmd = new SqlCommand("", conn);
         public static List<string> tables = new List<string>();
         public static DataTable dt = new DataTable();
-
+        public static string NTourName, PriceMoney;
 
         public static void CreateDB()
         {
@@ -56,11 +56,13 @@ namespace SWP_Jahresprojekt
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "create table skins (ID int not null primary key identity, Name nvarchar(100), Price int, Rarity nvarchar(100), BundleID int)";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "create table competition (ID int not null primary key identity, Name nvarchar(100), PriceMoney int, FinalTeam1 nvarchar(100), FinalTeam2 nvarchar(100), Result nvarchar(100), Winner nvarchar(100), Date nvarchar(100))";
+                cmd.CommandText = "create table competition (ID int not null primary key identity, Name nvarchar(100), PriceMoney int, FinalTeam1 nvarchar(100), FinalTeam2 nvarchar(100), Result nvarchar(100), Winner nvarchar(100), Date nvarchar(100), Lan int, Place nvarchar(100))";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "create table login (ID int not null primary key identity, Username nvarchar(100), Password nvarchar(100), Admin int);";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "insert into login (Username, Password, Admin) values ('admin', 'admin', 1);";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "insert into competition (Name, PriceMoney, FinalTeam1, FinalTeam2, Result, Winner, Date, Lan, Place) values ('Name', 100, 'FinalesTeam1', 'FinalesTeam2', 'Ergebnis', 'Gewinner', 'Datum', 1, 'Ort');";
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -126,6 +128,32 @@ namespace SWP_Jahresprojekt
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+        public static void tournamentShowAll(DataTable dt)
+        {
+            try
+            {
+                conn.Close();
+                conn.Open();
+                cmd.CommandText = "SELECT * FROM competition";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+            }
+            catch (Exception ex) { ex.ToString(); }
+        }
+        public static void newTourNfill()
+        {
+            try
+            {
+                conn.Open();
+                cmd.CommandText = "Select Name from competition";
+                NTourName = cmd.ExecuteNonQuery().ToString();
+                
+                PriceMoney = cmd.CommandText = "Select PriceMoney from competition";
+                conn.Close();
 
+
+            }catch(Exception ex) { ex.ToString(); }
+        }
     }
 }
