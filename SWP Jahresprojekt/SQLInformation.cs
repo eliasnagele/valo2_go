@@ -151,9 +151,15 @@ namespace SWP_Jahresprojekt
                 conn.Open();
                 cmd.CommandText = "Select Name from competition";
                 NTourName = cmd.ExecuteNonQuery().ToString();
-                
+
                 PriceMoney = cmd.CommandText = "Select PriceMoney from competition";
                 conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
 
         public static bool CheckIfUsernameExists(string username)
@@ -191,9 +197,10 @@ namespace SWP_Jahresprojekt
                 conn.Open();
                 cmd.CommandText = "select Admin from login where Username = '" + username + "';";
 
-                if (cmd.ExecuteNonQuery().Equals(1))
+                if (cmd.ExecuteScalar().Equals(1))
                     userisadmin = true;
 
+                MessageBox.Show(userisadmin.ToString());
                 return userisadmin;
             }
             catch(Exception ex)
@@ -227,10 +234,6 @@ namespace SWP_Jahresprojekt
                 MessageBox.Show(ex.ToString());
                 return false;
             }
-
-
-            }catch(Exception ex) { ex.ToString(); }
-
         }
     }
 }

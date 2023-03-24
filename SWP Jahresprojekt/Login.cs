@@ -33,10 +33,12 @@ namespace SWP_Jahresprojekt
         private void bt_Login_Click(object sender, EventArgs e)
         {
             bool usernameexist = false;
+            bool userisadmin = false;
 
             string username = tb_UsernameLogin.Text;
             string password = tb_PasswordLogin.Text;
 
+            userisadmin = SQLInformation.CheckIfUserIsAdmin(username);
             usernameexist = SQLInformation.CheckIfUsernameExists(username);
 
             if (usernameexist.Equals(true))
@@ -46,13 +48,12 @@ namespace SWP_Jahresprojekt
                 if (matchingpassword.Equals(true))
                 {
                     loggedin = true;
+                    admin = userisadmin;
                     MessageBox.Show("Login succesful");
                 }
                 else
                     MessageBox.Show("Wrong username or password");
             }
-
-            admin = true;
         }
 
         private void bt_CreateAccount_Click(object sender, EventArgs e)

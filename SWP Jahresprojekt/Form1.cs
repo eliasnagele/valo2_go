@@ -8,6 +8,11 @@ namespace SWP_Jahresprojekt
 
             SQLInformation.CreateDB();
             SQLInformation.CreateTables();
+
+            if (Login.admin.Equals(true))
+                bt_EditTables.Visible = true;
+            else
+                bt_EditTables.Visible = false;
         }
 
         private void bt_tournament_Click(object sender, EventArgs e)
