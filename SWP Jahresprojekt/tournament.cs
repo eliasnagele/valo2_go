@@ -15,6 +15,9 @@ namespace SWP_Jahresprojekt
         public tournament()
         {
             InitializeComponent();
+            DataTable dt = new DataTable();
+            SQLInformation.tournamentShowAll(dt);
+            dtv_tournament.DataSource = dt;
         }
 
         private void bt_home_Click(object sender, EventArgs e)

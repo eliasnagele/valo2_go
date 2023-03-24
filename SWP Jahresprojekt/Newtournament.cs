@@ -17,6 +17,7 @@ namespace SWP_Jahresprojekt
             InitializeComponent();
             tb_place.Hide();
             lbl_place.Hide();
+            SQLInformation.newTourNfill();
         }
 
         private void cb_lan_CheckedChanged(object sender, EventArgs e)
