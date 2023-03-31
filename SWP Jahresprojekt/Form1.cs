@@ -8,11 +8,6 @@ namespace SWP_Jahresprojekt
 
             SQLInformation.CreateDB();
             SQLInformation.CreateTables();
-
-            if (Login.admin.Equals(true))
-                bt_EditTables.Visible = true;
-            else
-                bt_EditTables.Visible = false;
         }
 
         private void bt_tournament_Click(object sender, EventArgs e)
@@ -62,10 +57,19 @@ namespace SWP_Jahresprojekt
 
         private void bt_EditTables_Click(object sender, EventArgs e)
         {
-            ChangeTable changetable = new ChangeTable();
-            this.Hide();
-            changetable.ShowDialog();
-            this.Show();
+            bool EditTable = Login.admin;
+
+            if (EditTable.Equals(true))
+            {
+                ChangeTable changetable = new ChangeTable();
+                this.Hide();
+                changetable.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("No Access Rights");
+            }
         }
     }
 }
