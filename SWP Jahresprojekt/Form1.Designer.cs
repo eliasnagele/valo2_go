@@ -40,7 +40,7 @@
             // 
             // bt_tournament
             // 
-            this.bt_tournament.Location = new System.Drawing.Point(382, 190);
+            this.bt_tournament.Location = new System.Drawing.Point(380, 189);
             this.bt_tournament.Name = "bt_tournament";
             this.bt_tournament.Size = new System.Drawing.Size(75, 23);
             this.bt_tournament.TabIndex = 0;

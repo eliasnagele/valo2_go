@@ -32,21 +32,13 @@
             this.bt_home = new System.Windows.Forms.Button();
             this.bt_exit = new System.Windows.Forms.Button();
             this.lb_bundle = new System.Windows.Forms.Label();
-            this.pb_bundle1 = new System.Windows.Forms.PictureBox();
-            this.pb_bundle4 = new System.Windows.Forms.PictureBox();
-            this.pb_bundle2 = new System.Windows.Forms.PictureBox();
-            this.pb_bundle3 = new System.Windows.Forms.PictureBox();
-            this.tb_bundle1 = new System.Windows.Forms.TextBox();
-            this.tb_bundle4 = new System.Windows.Forms.TextBox();
-            this.tb_bundle3 = new System.Windows.Forms.TextBox();
-            this.tb_bundle2 = new System.Windows.Forms.TextBox();
             this.pb_glass = new System.Windows.Forms.PictureBox();
             this.tb_search = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_bundle1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_bundle4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_bundle2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_bundle3)).BeginInit();
+            this.bt_Bundle1 = new System.Windows.Forms.Button();
+            this.bt_Bundle2 = new System.Windows.Forms.Button();
+            this.dgv_bundles = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_bundles)).BeginInit();
             this.SuspendLayout();
             // 
             // bt_home
@@ -79,70 +71,6 @@
             this.lb_bundle.TabIndex = 6;
             this.lb_bundle.Text = "Bundles";
             // 
-            // pb_bundle1
-            // 
-            this.pb_bundle1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pb_bundle1.Location = new System.Drawing.Point(50, 93);
-            this.pb_bundle1.Name = "pb_bundle1";
-            this.pb_bundle1.Size = new System.Drawing.Size(275, 147);
-            this.pb_bundle1.TabIndex = 7;
-            this.pb_bundle1.TabStop = false;
-            // 
-            // pb_bundle4
-            // 
-            this.pb_bundle4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pb_bundle4.Location = new System.Drawing.Point(458, 272);
-            this.pb_bundle4.Name = "pb_bundle4";
-            this.pb_bundle4.Size = new System.Drawing.Size(275, 147);
-            this.pb_bundle4.TabIndex = 8;
-            this.pb_bundle4.TabStop = false;
-            // 
-            // pb_bundle2
-            // 
-            this.pb_bundle2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pb_bundle2.Location = new System.Drawing.Point(458, 93);
-            this.pb_bundle2.Name = "pb_bundle2";
-            this.pb_bundle2.Size = new System.Drawing.Size(275, 147);
-            this.pb_bundle2.TabIndex = 9;
-            this.pb_bundle2.TabStop = false;
-            // 
-            // pb_bundle3
-            // 
-            this.pb_bundle3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pb_bundle3.Location = new System.Drawing.Point(50, 272);
-            this.pb_bundle3.Name = "pb_bundle3";
-            this.pb_bundle3.Size = new System.Drawing.Size(275, 147);
-            this.pb_bundle3.TabIndex = 10;
-            this.pb_bundle3.TabStop = false;
-            // 
-            // tb_bundle1
-            // 
-            this.tb_bundle1.Location = new System.Drawing.Point(137, 243);
-            this.tb_bundle1.Name = "tb_bundle1";
-            this.tb_bundle1.Size = new System.Drawing.Size(94, 23);
-            this.tb_bundle1.TabIndex = 11;
-            // 
-            // tb_bundle4
-            // 
-            this.tb_bundle4.Location = new System.Drawing.Point(549, 424);
-            this.tb_bundle4.Name = "tb_bundle4";
-            this.tb_bundle4.Size = new System.Drawing.Size(94, 23);
-            this.tb_bundle4.TabIndex = 12;
-            // 
-            // tb_bundle3
-            // 
-            this.tb_bundle3.Location = new System.Drawing.Point(137, 424);
-            this.tb_bundle3.Name = "tb_bundle3";
-            this.tb_bundle3.Size = new System.Drawing.Size(94, 23);
-            this.tb_bundle3.TabIndex = 13;
-            // 
-            // tb_bundle2
-            // 
-            this.tb_bundle2.Location = new System.Drawing.Point(549, 243);
-            this.tb_bundle2.Name = "tb_bundle2";
-            this.tb_bundle2.Size = new System.Drawing.Size(94, 23);
-            this.tb_bundle2.TabIndex = 14;
-            // 
             // pb_glass
             // 
             this.pb_glass.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -163,21 +91,43 @@
             this.tb_search.Size = new System.Drawing.Size(137, 20);
             this.tb_search.TabIndex = 15;
             // 
+            // bt_Bundle1
+            // 
+            this.bt_Bundle1.Location = new System.Drawing.Point(12, 87);
+            this.bt_Bundle1.Name = "bt_Bundle1";
+            this.bt_Bundle1.Size = new System.Drawing.Size(367, 182);
+            this.bt_Bundle1.TabIndex = 17;
+            this.bt_Bundle1.UseVisualStyleBackColor = true;
+            this.bt_Bundle1.Click += new System.EventHandler(this.bt_Bundle1_Click);
+            // 
+            // bt_Bundle2
+            // 
+            this.bt_Bundle2.Location = new System.Drawing.Point(421, 87);
+            this.bt_Bundle2.Name = "bt_Bundle2";
+            this.bt_Bundle2.Size = new System.Drawing.Size(367, 182);
+            this.bt_Bundle2.TabIndex = 18;
+            this.bt_Bundle2.UseVisualStyleBackColor = true;
+            this.bt_Bundle2.Click += new System.EventHandler(this.bt_Bundle2_Click);
+            // 
+            // dgv_bundles
+            // 
+            this.dgv_bundles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_bundles.Location = new System.Drawing.Point(12, 279);
+            this.dgv_bundles.Name = "dgv_bundles";
+            this.dgv_bundles.RowTemplate.Height = 25;
+            this.dgv_bundles.Size = new System.Drawing.Size(776, 159);
+            this.dgv_bundles.TabIndex = 19;
+            // 
             // Bundles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgv_bundles);
+            this.Controls.Add(this.bt_Bundle2);
+            this.Controls.Add(this.bt_Bundle1);
             this.Controls.Add(this.pb_glass);
             this.Controls.Add(this.tb_search);
-            this.Controls.Add(this.tb_bundle2);
-            this.Controls.Add(this.tb_bundle3);
-            this.Controls.Add(this.tb_bundle4);
-            this.Controls.Add(this.tb_bundle1);
-            this.Controls.Add(this.pb_bundle3);
-            this.Controls.Add(this.pb_bundle2);
-            this.Controls.Add(this.pb_bundle4);
-            this.Controls.Add(this.pb_bundle1);
             this.Controls.Add(this.lb_bundle);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_home);
@@ -188,11 +138,8 @@
             this.Name = "Bundles";
             this.ShowIcon = false;
             this.Text = "Bundles";
-            ((System.ComponentModel.ISupportInitialize)(this.pb_bundle1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_bundle4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_bundle2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_bundle3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_bundles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,15 +150,10 @@
         private Button bt_home;
         private Button bt_exit;
         private Label lb_bundle;
-        private PictureBox pb_bundle1;
-        private PictureBox pb_bundle4;
-        private PictureBox pb_bundle2;
-        private PictureBox pb_bundle3;
-        private TextBox tb_bundle1;
-        private TextBox tb_bundle4;
-        private TextBox tb_bundle3;
-        private TextBox tb_bundle2;
         private PictureBox pb_glass;
         private TextBox tb_search;
+        private Button bt_Bundle1;
+        private Button bt_Bundle2;
+        private DataGridView dgv_bundles;
     }
 }
