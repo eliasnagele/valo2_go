@@ -36,9 +36,9 @@
             this.tb_name = new System.Windows.Forms.TextBox();
             this.tb_pricemoney = new System.Windows.Forms.TextBox();
             this.lbl_pricemoney = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_Date = new System.Windows.Forms.TextBox();
             this.lbl_date = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_Winner = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_lan = new System.Windows.Forms.Label();
             this.tb_place = new System.Windows.Forms.TextBox();
@@ -123,14 +123,14 @@
             this.lbl_pricemoney.TabIndex = 11;
             this.lbl_pricemoney.Text = "Pricemoney";
             // 
-            // textBox2
+            // tb_Date
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(273, 366);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 14;
+            this.tb_Date.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_Date.Location = new System.Drawing.Point(273, 366);
+            this.tb_Date.Name = "tb_Date";
+            this.tb_Date.ReadOnly = true;
+            this.tb_Date.Size = new System.Drawing.Size(100, 25);
+            this.tb_Date.TabIndex = 14;
             // 
             // lbl_date
             // 
@@ -142,14 +142,14 @@
             this.lbl_date.TabIndex = 13;
             this.lbl_date.Text = "Date";
             // 
-            // textBox3
+            // tb_Winner
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(516, 270);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 25);
-            this.textBox3.TabIndex = 16;
+            this.tb_Winner.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_Winner.Location = new System.Drawing.Point(516, 270);
+            this.tb_Winner.Name = "tb_Winner";
+            this.tb_Winner.ReadOnly = true;
+            this.tb_Winner.Size = new System.Drawing.Size(100, 25);
+            this.tb_Winner.TabIndex = 16;
             // 
             // label3
             // 
@@ -193,6 +193,7 @@
             // cb_lan
             // 
             this.cb_lan.AutoSize = true;
+            this.cb_lan.Enabled = false;
             this.cb_lan.Location = new System.Drawing.Point(516, 325);
             this.cb_lan.Name = "cb_lan";
             this.cb_lan.Size = new System.Drawing.Size(15, 14);
@@ -209,9 +210,9 @@
             this.Controls.Add(this.tb_place);
             this.Controls.Add(this.lbl_place);
             this.Controls.Add(this.lbl_lan);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tb_Winner);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb_Date);
             this.Controls.Add(this.lbl_date);
             this.Controls.Add(this.tb_pricemoney);
             this.Controls.Add(this.lbl_pricemoney);
@@ -244,9 +245,9 @@
         private TextBox tb_name;
         private TextBox tb_pricemoney;
         private Label lbl_pricemoney;
-        private TextBox textBox2;
+        private TextBox tb_Date;
         private Label lbl_date;
-        private TextBox textBox3;
+        private TextBox tb_Winner;
         private Label label3;
         private Label lbl_lan;
         private TextBox tb_place;

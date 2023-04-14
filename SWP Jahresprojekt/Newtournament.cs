@@ -18,6 +18,19 @@ namespace SWP_Jahresprojekt
             tb_place.Hide();
             lbl_place.Hide();
             SQLInformation.newTourNfill();
+            tb_name.Text = SQLInformation.NTourName.ToString();
+            tb_pricemoney.Text = SQLInformation.PriceMoney.ToString();
+            tb_Date.Text = SQLInformation.Date.ToString();
+            tb_Winner.Text = SQLInformation.Winner.ToString();
+            if(SQLInformation.Lan == "1")
+            {
+                cb_lan.Checked = true;
+                tb_place.Text = SQLInformation.Place.ToString();
+            }
+            else
+            {
+                cb_lan.Checked = false;
+            }
         }
 
         private void cb_lan_CheckedChanged(object sender, EventArgs e)
