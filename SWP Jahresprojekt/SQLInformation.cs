@@ -47,6 +47,7 @@ namespace SWP_Jahresprojekt
                 ex.ToString();
             }
         }
+
         public static void CreateTables()
         {
             try
@@ -74,38 +75,63 @@ namespace SWP_Jahresprojekt
 
         public static void ReadTables()
         {
-            conn.Close();
-            conn.Open();
-            cmd.CommandText = "select * from sys.tables;";
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
+            try
             {
-                while (reader.Read())
+                conn.Close();
+                conn.Open();
+                cmd.CommandText = "select * from sys.tables;";
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
                 {
-                    string item = reader[0].ToString();
-                    tables.Add(item);
+                    while (reader.Read())
+                    {
+                        string item = reader[0].ToString();
+                        tables.Add(item);
+                    }
                 }
+                conn.Close();
             }
-            conn.Close();
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         public static DataTable FillDTV(string table)
         {
-            conn.Open();
-            cmd.CommandText = "select * from " + table;
-            dt.Load(cmd.ExecuteReader());
-            conn.Close();
-            return dt;
+            try
+            {
+                conn.Open();
+                dt.Clear();
+                dt.Columns.Clear();
+                cmd.CommandText = "select * from " + table;
+                dt.Load(cmd.ExecuteReader());
+                conn.Close();
+                return dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return dt;
+            }
         }
 
         public static void SaveTableChanges()
         {
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
-            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+            try
+            {
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
 
-            sqlDataAdapter.Update(dt);
+                sqlDataAdapter.Update(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
+
         public static void SkinsshowAll(DataTable dt)
         {
             try
@@ -125,12 +151,20 @@ namespace SWP_Jahresprojekt
             string salt = BCrypt.GenerateSalt();
             string hashedpassword = BCrypt.HashPassword(password, salt);
 
-            conn.Close();
-            conn.Open();
-            cmd.CommandText = "insert into login(Username, Password) values ('" + username + "', '" + hashedpassword + "');";
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                conn.Close();
+                conn.Open();
+                cmd.CommandText = "insert into login(Username, Password) values ('" + username + "', '" + hashedpassword + "');";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
+
         public static void tournamentShowAll(DataTable dt)
         {
             try
@@ -144,6 +178,7 @@ namespace SWP_Jahresprojekt
             }
             catch (Exception ex) { ex.ToString(); }
         }
+
         public static void newTourNfill()
         {
             try
@@ -151,10 +186,15 @@ namespace SWP_Jahresprojekt
                 conn.Open();
                 cmd.CommandText = "Select Name from competition";
                 NTourName = cmd.ExecuteNonQuery().ToString();
-                
+
                 PriceMoney = cmd.CommandText = "Select PriceMoney from competition";
                 conn.Close();
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
         public static bool CheckIfUsernameExists(string username)
         {
@@ -191,9 +231,10 @@ namespace SWP_Jahresprojekt
                 conn.Open();
                 cmd.CommandText = "select Admin from login where Username = '" + username + "';";
 
-                if (cmd.ExecuteNonQuery().Equals(1))
+                if (cmd.ExecuteScalar().Equals(1))
                     userisadmin = true;
 
+                MessageBox.Show(userisadmin.ToString());
                 return userisadmin;
             }
             catch(Exception ex)
@@ -227,10 +268,6 @@ namespace SWP_Jahresprojekt
                 MessageBox.Show(ex.ToString());
                 return false;
             }
-
-
-            }catch(Exception ex) { ex.ToString(); }
-
         }
     }
 }
