@@ -77,6 +77,8 @@ namespace SWP_Jahresprojekt
         {
             try
             {
+                tables.Clear();
+
                 conn.Close();
                 conn.Open();
                 cmd.CommandText = "select * from sys.tables;";
@@ -144,6 +146,23 @@ namespace SWP_Jahresprojekt
                 conn.Close();
             }
             catch (Exception ex) { ex.ToString(); }
+        }
+
+        public static void BundlesShowAll(DataTable dt)
+        {
+            try
+            {
+                conn.Close();
+                conn.Open();
+                cmd.CommandText = "select * from bundles";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         public static void AddUser(string username, string password)
