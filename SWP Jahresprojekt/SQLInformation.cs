@@ -15,7 +15,7 @@ namespace SWP_Jahresprojekt
         public static SqlCommand cmd = new SqlCommand("", conn);
         public static List<string> tables = new List<string>();
         public static DataTable dt = new DataTable();
-        public static string NTourName, PriceMoney;
+        public static string NTourName, PriceMoney, FinalTeam1, FinalTeam2, Result, Winner, Date, Lan, Place;
 
         public static void CreateDB()
         {
@@ -204,9 +204,33 @@ namespace SWP_Jahresprojekt
             {
                 conn.Open();
                 cmd.CommandText = "Select Name from competition";
-                NTourName = cmd.ExecuteNonQuery().ToString();
+                NTourName = cmd.ExecuteScalar().ToString();
 
-                PriceMoney = cmd.CommandText = "Select PriceMoney from competition";
+                cmd.CommandText = "Select PriceMoney from competition";
+                PriceMoney = cmd.ExecuteScalar().ToString();
+
+                cmd.CommandText = "Select FinalTeam1 from competition";
+                FinalTeam1 = cmd.ExecuteScalar().ToString();
+
+                cmd.CommandText = "Select FinalTeam2 from competition";
+                FinalTeam2 = cmd.ExecuteScalar().ToString();
+
+                cmd.CommandText = "Select Result from competition";
+                Result = cmd.ExecuteScalar().ToString();
+
+                cmd.CommandText = "Select Winner from competition";
+                Winner = cmd.ExecuteScalar().ToString();
+
+                cmd.CommandText = "Select Date from competition";
+                Date = cmd.ExecuteScalar().ToString();
+
+                cmd.CommandText = "Select Lan from competition";
+                Lan = cmd.ExecuteScalar().ToString();
+
+                cmd.CommandText = "Select Place from competition";
+                Place = cmd.ExecuteScalar().ToString();
+
+
                 conn.Close();
             }
             catch (Exception ex)

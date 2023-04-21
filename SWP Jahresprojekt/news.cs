@@ -15,6 +15,8 @@ namespace SWP_Jahresprojekt
         public news()
         {
             InitializeComponent();
+            tb_newsOne.Text = "Hier stehen später Nachrichten!!! \n"+ "Hier stehen später Nachrichten!!! \n"+ "Hier stehen später Nachrichten!!! \n"+ "Hier stehen später Nachrichten!!! \n";
+            tb_newsTwo.Text = "Hier stehen später Nachrichten!!! \n" + "Hier stehen später Nachrichten!!! \n" + "Hier stehen später Nachrichten!!! \n" + "Hier stehen später Nachrichten!!! \n";
         }
 
         private void bt_home_Click(object sender, EventArgs e)
