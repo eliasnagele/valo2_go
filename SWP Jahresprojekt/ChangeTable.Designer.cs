@@ -40,6 +40,7 @@
             // lb_Table
             // 
             this.lb_Table.AutoSize = true;
+            this.lb_Table.ForeColor = System.Drawing.Color.Snow;
             this.lb_Table.Location = new System.Drawing.Point(14, 20);
             this.lb_Table.Name = "lb_Table";
             this.lb_Table.Size = new System.Drawing.Size(34, 15);
@@ -56,6 +57,7 @@
             // 
             // dtv_ChangeTable
             // 
+            this.dtv_ChangeTable.BackgroundColor = System.Drawing.Color.Black;
             this.dtv_ChangeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_ChangeTable.Location = new System.Drawing.Point(14, 58);
             this.dtv_ChangeTable.Name = "dtv_ChangeTable";
@@ -97,6 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bt_SaveChanges);
             this.Controls.Add(this.bt_Return);

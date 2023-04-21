@@ -43,31 +43,36 @@
             // 
             // bt_home
             // 
+            this.bt_home.BackColor = System.Drawing.Color.Orange;
             this.bt_home.Location = new System.Drawing.Point(16, 31);
             this.bt_home.Name = "bt_home";
-            this.bt_home.Size = new System.Drawing.Size(75, 23);
+            this.bt_home.Size = new System.Drawing.Size(52, 23);
             this.bt_home.TabIndex = 0;
             this.bt_home.Text = "Home";
-            this.bt_home.UseVisualStyleBackColor = true;
+            this.bt_home.UseVisualStyleBackColor = false;
             this.bt_home.Click += new System.EventHandler(this.bt_home_Click);
             // 
             // bt_exit
             // 
-            this.bt_exit.Location = new System.Drawing.Point(16, 2);
+            this.bt_exit.BackColor = System.Drawing.Color.Red;
+            this.bt_exit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bt_exit.Location = new System.Drawing.Point(16, 5);
             this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(75, 23);
+            this.bt_exit.Size = new System.Drawing.Size(52, 23);
             this.bt_exit.TabIndex = 1;
             this.bt_exit.Text = "Exit";
-            this.bt_exit.UseVisualStyleBackColor = true;
+            this.bt_exit.UseVisualStyleBackColor = false;
             this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
             // lb_headline
             // 
             this.lb_headline.AutoSize = true;
-            this.lb_headline.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_headline.Location = new System.Drawing.Point(330, 22);
+            this.lb_headline.BackColor = System.Drawing.Color.Transparent;
+            this.lb_headline.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_headline.ForeColor = System.Drawing.Color.White;
+            this.lb_headline.Location = new System.Drawing.Point(291, 5);
             this.lb_headline.Name = "lb_headline";
-            this.lb_headline.Size = new System.Drawing.Size(153, 32);
+            this.lb_headline.Size = new System.Drawing.Size(228, 45);
             this.lb_headline.TabIndex = 6;
             this.lb_headline.Text = "Tournaments";
             // 
@@ -91,6 +96,7 @@
             // 
             // dtv_tournament
             // 
+            this.dtv_tournament.BackgroundColor = System.Drawing.Color.Black;
             this.dtv_tournament.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_tournament.Location = new System.Drawing.Point(16, 237);
             this.dtv_tournament.Name = "dtv_tournament";
@@ -122,6 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(834, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
