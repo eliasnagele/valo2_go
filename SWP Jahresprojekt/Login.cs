@@ -66,6 +66,10 @@ namespace SWP_Jahresprojekt
             {
                 SQLInformation.AddUser(username, password);
             }
+            MessageBox.Show(username + " wurde erfolgreich erstellt!");
+            tb_UsernameCa.Clear();
+            tb_PasswordCA.Clear();
+            tb_ConfirmPasswordCA.Clear();
         }
     }
 }
