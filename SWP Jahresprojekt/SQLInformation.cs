@@ -312,5 +312,29 @@ namespace SWP_Jahresprojekt
                 return false;
             }
         }
+
+        public static List<string> BundleDetails()
+        {
+            List<string> details = new List<string>();
+
+            try
+            {
+                if (Bundles.BundleID.Equals(1))
+                {
+
+                }
+
+                else if (Bundles.BundleID.Equals(2))
+                {
+
+                }
+                return details;
+            }
+           catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return details;
+            }
+        }
     }
 }
