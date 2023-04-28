@@ -41,37 +41,40 @@
             // 
             // bt_home
             // 
+            this.bt_home.BackColor = System.Drawing.Color.Orange;
             this.bt_home.Location = new System.Drawing.Point(38, 41);
             this.bt_home.Name = "bt_home";
-            this.bt_home.Size = new System.Drawing.Size(75, 23);
+            this.bt_home.Size = new System.Drawing.Size(57, 23);
             this.bt_home.TabIndex = 0;
             this.bt_home.Text = "Home";
-            this.bt_home.UseVisualStyleBackColor = true;
+            this.bt_home.UseVisualStyleBackColor = false;
             this.bt_home.Click += new System.EventHandler(this.bt_home_Click);
             // 
             // bt_exit
             // 
+            this.bt_exit.BackColor = System.Drawing.Color.Red;
             this.bt_exit.Location = new System.Drawing.Point(38, 12);
             this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(75, 23);
+            this.bt_exit.Size = new System.Drawing.Size(57, 23);
             this.bt_exit.TabIndex = 2;
             this.bt_exit.Text = "Exit";
-            this.bt_exit.UseVisualStyleBackColor = true;
+            this.bt_exit.UseVisualStyleBackColor = false;
             this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
             // lb_headline
             // 
             this.lb_headline.AutoSize = true;
-            this.lb_headline.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_headline.Location = new System.Drawing.Point(347, 31);
+            this.lb_headline.Font = new System.Drawing.Font("Segoe UI Black", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_headline.ForeColor = System.Drawing.Color.White;
+            this.lb_headline.Location = new System.Drawing.Point(293, 31);
             this.lb_headline.Name = "lb_headline";
-            this.lb_headline.Size = new System.Drawing.Size(130, 32);
+            this.lb_headline.Size = new System.Drawing.Size(215, 47);
             this.lb_headline.TabIndex = 6;
             this.lb_headline.Text = "Überschrift";
             // 
             // tb_newsOne
             // 
-            this.tb_newsOne.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tb_newsOne.BackColor = System.Drawing.Color.Snow;
             this.tb_newsOne.Location = new System.Drawing.Point(38, 114);
             this.tb_newsOne.Multiline = true;
             this.tb_newsOne.Name = "tb_newsOne";
@@ -81,8 +84,9 @@
             // 
             // pb_newsOne
             // 
-            this.pb_newsOne.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pb_newsOne.Location = new System.Drawing.Point(431, 114);
+            this.pb_newsOne.BackColor = System.Drawing.Color.Red;
+            this.pb_newsOne.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_newsOne.Location = new System.Drawing.Point(442, 114);
             this.pb_newsOne.Name = "pb_newsOne";
             this.pb_newsOne.Size = new System.Drawing.Size(326, 148);
             this.pb_newsOne.TabIndex = 8;
@@ -90,8 +94,9 @@
             // 
             // pb_newsTwo
             // 
-            this.pb_newsTwo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pb_newsTwo.Location = new System.Drawing.Point(431, 290);
+            this.pb_newsTwo.BackColor = System.Drawing.Color.Red;
+            this.pb_newsTwo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_newsTwo.Location = new System.Drawing.Point(442, 290);
             this.pb_newsTwo.Name = "pb_newsTwo";
             this.pb_newsTwo.Size = new System.Drawing.Size(326, 148);
             this.pb_newsTwo.TabIndex = 10;
@@ -99,7 +104,7 @@
             // 
             // tb_newsTwo
             // 
-            this.tb_newsTwo.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tb_newsTwo.BackColor = System.Drawing.Color.Snow;
             this.tb_newsTwo.Location = new System.Drawing.Point(38, 290);
             this.tb_newsTwo.Multiline = true;
             this.tb_newsTwo.Name = "tb_newsTwo";
@@ -111,6 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pb_newsTwo);
             this.Controls.Add(this.tb_newsTwo);
@@ -125,6 +131,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "news";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "news";
             ((System.ComponentModel.ISupportInitialize)(this.pb_newsOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_newsTwo)).EndInit();
