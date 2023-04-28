@@ -16,16 +16,22 @@ namespace SWP_Jahresprojekt
         {
             InitializeComponent();
 
-            List<string> bundledetails = new List<string>();
+            DataTable dt = new DataTable();
+            
+            dt = SQLInformation.BundleDetails();
 
             if (Bundles.BundleID.Equals(1))
             {
-                bundledetails = SQLInformation.BundleDetails();
+                
+                
+               
+                
             }
-            else if (Bundles.BundleID.Equals(2))
+            else if(Bundles.BundleID.Equals(2))
             {
 
             }
+            
         }
 
         private void bt_back_Click(object sender, EventArgs e)
