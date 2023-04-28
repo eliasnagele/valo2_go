@@ -313,27 +313,28 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static List<string> BundleDetails()
+        public static DataTable BundleDetails()
         {
-            List<string> details = new List<string>();
+            DataTable dt = new DataTable();
 
             try
             {
-                if (Bundles.BundleID.Equals(1))
-                {
+                conn.Open();
 
-                }
+                cmd.CommandText = "select count(ID) from bundles";
+                int rows = (int)cmd.ExecuteScalar();
 
-                else if (Bundles.BundleID.Equals(2))
-                {
-
-                }
-                return details;
+                dt.Clear();
+                dt.Columns.Clear();
+                cmd.CommandText = "select * from bundles where ID = " + rows;
+                dt.Load(cmd.ExecuteReader());
+                conn.Close();
+                return dt;
             }
-           catch (Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-                return details;
+                return dt;
             }
         }
     }
