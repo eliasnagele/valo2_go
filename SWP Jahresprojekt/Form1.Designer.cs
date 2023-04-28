@@ -1,6 +1,6 @@
 ﻿namespace SWP_Jahresprojekt
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         ///  Required designer variable.
@@ -132,7 +132,7 @@
             this.bt_EditTables.UseVisualStyleBackColor = true;
             this.bt_EditTables.Click += new System.EventHandler(this.bt_EditTables_Click);
             // 
-            // Form1
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -150,9 +150,10 @@
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(816, 489);
-            this.Name = "Form1";
+            this.Name = "Menu";
             this.ShowIcon = false;
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu";
             this.TransparencyKey = System.Drawing.Color.HotPink;
             this.ResumeLayout(false);
             this.PerformLayout();

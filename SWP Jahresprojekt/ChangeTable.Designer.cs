@@ -108,6 +108,7 @@
             this.Controls.Add(this.cb_ChooseTable);
             this.Controls.Add(this.lb_Table);
             this.Name = "ChangeTable";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangeTable";
             ((System.ComponentModel.ISupportInitialize)(this.dtv_ChangeTable)).EndInit();
             this.ResumeLayout(false);

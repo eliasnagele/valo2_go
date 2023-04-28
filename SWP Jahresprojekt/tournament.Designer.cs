@@ -144,6 +144,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "tournament";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "tournament";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dtv_tournament)).EndInit();
