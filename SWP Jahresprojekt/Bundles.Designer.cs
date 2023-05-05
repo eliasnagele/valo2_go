@@ -43,31 +43,34 @@
             // 
             // bt_home
             // 
-            this.bt_home.Location = new System.Drawing.Point(12, 45);
+            this.bt_home.BackColor = System.Drawing.Color.Orange;
+            this.bt_home.Location = new System.Drawing.Point(12, 35);
             this.bt_home.Name = "bt_home";
-            this.bt_home.Size = new System.Drawing.Size(75, 23);
+            this.bt_home.Size = new System.Drawing.Size(49, 25);
             this.bt_home.TabIndex = 0;
             this.bt_home.Text = "Home";
-            this.bt_home.UseVisualStyleBackColor = true;
+            this.bt_home.UseVisualStyleBackColor = false;
             this.bt_home.Click += new System.EventHandler(this.bt_home_Click);
             // 
             // bt_exit
             // 
-            this.bt_exit.Location = new System.Drawing.Point(12, 16);
+            this.bt_exit.BackColor = System.Drawing.Color.Red;
+            this.bt_exit.Location = new System.Drawing.Point(12, 9);
             this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(75, 23);
+            this.bt_exit.Size = new System.Drawing.Size(49, 23);
             this.bt_exit.TabIndex = 2;
             this.bt_exit.Text = "Exit";
-            this.bt_exit.UseVisualStyleBackColor = true;
+            this.bt_exit.UseVisualStyleBackColor = false;
             this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
             // lb_bundle
             // 
             this.lb_bundle.AutoSize = true;
-            this.lb_bundle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_bundle.Location = new System.Drawing.Point(343, 45);
+            this.lb_bundle.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_bundle.ForeColor = System.Drawing.Color.White;
+            this.lb_bundle.Location = new System.Drawing.Point(327, 25);
             this.lb_bundle.Name = "lb_bundle";
-            this.lb_bundle.Size = new System.Drawing.Size(99, 32);
+            this.lb_bundle.Size = new System.Drawing.Size(146, 45);
             this.lb_bundle.TabIndex = 6;
             this.lb_bundle.Text = "Bundles";
             // 
@@ -93,24 +96,27 @@
             // 
             // bt_Bundle1
             // 
+            this.bt_Bundle1.BackColor = System.Drawing.Color.Snow;
             this.bt_Bundle1.Location = new System.Drawing.Point(12, 87);
             this.bt_Bundle1.Name = "bt_Bundle1";
             this.bt_Bundle1.Size = new System.Drawing.Size(367, 182);
             this.bt_Bundle1.TabIndex = 17;
-            this.bt_Bundle1.UseVisualStyleBackColor = true;
+            this.bt_Bundle1.UseVisualStyleBackColor = false;
             this.bt_Bundle1.Click += new System.EventHandler(this.bt_Bundle1_Click);
             // 
             // bt_Bundle2
             // 
+            this.bt_Bundle2.BackColor = System.Drawing.Color.Snow;
             this.bt_Bundle2.Location = new System.Drawing.Point(421, 87);
             this.bt_Bundle2.Name = "bt_Bundle2";
             this.bt_Bundle2.Size = new System.Drawing.Size(367, 182);
             this.bt_Bundle2.TabIndex = 18;
-            this.bt_Bundle2.UseVisualStyleBackColor = true;
+            this.bt_Bundle2.UseVisualStyleBackColor = false;
             this.bt_Bundle2.Click += new System.EventHandler(this.bt_Bundle2_Click);
             // 
             // dgv_bundles
             // 
+            this.dgv_bundles.BackgroundColor = System.Drawing.Color.Black;
             this.dgv_bundles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_bundles.Location = new System.Drawing.Point(12, 279);
             this.dgv_bundles.Name = "dgv_bundles";
@@ -122,6 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgv_bundles);
             this.Controls.Add(this.bt_Bundle2);
@@ -137,6 +144,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Bundles";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bundles";
             ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_bundles)).EndInit();

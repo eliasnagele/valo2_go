@@ -70,7 +70,7 @@
             this.lb_headline.BackColor = System.Drawing.Color.Transparent;
             this.lb_headline.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_headline.ForeColor = System.Drawing.Color.White;
-            this.lb_headline.Location = new System.Drawing.Point(291, 5);
+            this.lb_headline.Location = new System.Drawing.Point(293, 6);
             this.lb_headline.Name = "lb_headline";
             this.lb_headline.Size = new System.Drawing.Size(228, 45);
             this.lb_headline.TabIndex = 6;
@@ -78,20 +78,22 @@
             // 
             // btn_newtournament1
             // 
+            this.btn_newtournament1.BackColor = System.Drawing.Color.Snow;
             this.btn_newtournament1.Location = new System.Drawing.Point(16, 69);
             this.btn_newtournament1.Name = "btn_newtournament1";
             this.btn_newtournament1.Size = new System.Drawing.Size(366, 139);
             this.btn_newtournament1.TabIndex = 7;
-            this.btn_newtournament1.UseVisualStyleBackColor = true;
+            this.btn_newtournament1.UseVisualStyleBackColor = false;
             this.btn_newtournament1.Click += new System.EventHandler(this.btn_newtournament1_Click);
             // 
             // btn_newtournament2
             // 
+            this.btn_newtournament2.BackColor = System.Drawing.Color.Snow;
             this.btn_newtournament2.Location = new System.Drawing.Point(442, 69);
             this.btn_newtournament2.Name = "btn_newtournament2";
             this.btn_newtournament2.Size = new System.Drawing.Size(380, 139);
             this.btn_newtournament2.TabIndex = 8;
-            this.btn_newtournament2.UseVisualStyleBackColor = true;
+            this.btn_newtournament2.UseVisualStyleBackColor = false;
             this.btn_newtournament2.Click += new System.EventHandler(this.btn_newtournament2_Click);
             // 
             // dtv_tournament
@@ -146,7 +148,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "tournament";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dtv_tournament)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -75,7 +75,7 @@
             this.lb_headline.BackColor = System.Drawing.Color.Black;
             this.lb_headline.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_headline.ForeColor = System.Drawing.Color.Snow;
-            this.lb_headline.Location = new System.Drawing.Point(305, 9);
+            this.lb_headline.Location = new System.Drawing.Point(300, 10);
             this.lb_headline.Name = "lb_headline";
             this.lb_headline.Size = new System.Drawing.Size(199, 45);
             this.lb_headline.TabIndex = 7;
