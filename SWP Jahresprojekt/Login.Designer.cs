@@ -79,7 +79,7 @@
             // 
             this.tb_UsernameLogin.BackColor = System.Drawing.Color.Snow;
             this.tb_UsernameLogin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_UsernameLogin.Location = new System.Drawing.Point(556, 166);
+            this.tb_UsernameLogin.Location = new System.Drawing.Point(556, 170);
             this.tb_UsernameLogin.Name = "tb_UsernameLogin";
             this.tb_UsernameLogin.Size = new System.Drawing.Size(122, 25);
             this.tb_UsernameLogin.TabIndex = 8;
@@ -88,7 +88,7 @@
             // 
             this.tb_PasswordLogin.BackColor = System.Drawing.Color.Snow;
             this.tb_PasswordLogin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_PasswordLogin.Location = new System.Drawing.Point(556, 203);
+            this.tb_PasswordLogin.Location = new System.Drawing.Point(556, 207);
             this.tb_PasswordLogin.Name = "tb_PasswordLogin";
             this.tb_PasswordLogin.PasswordChar = '*';
             this.tb_PasswordLogin.Size = new System.Drawing.Size(122, 25);
@@ -110,7 +110,7 @@
             this.lb_PasswordCA.AutoSize = true;
             this.lb_PasswordCA.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_PasswordCA.ForeColor = System.Drawing.Color.White;
-            this.lb_PasswordCA.Location = new System.Drawing.Point(97, 203);
+            this.lb_PasswordCA.Location = new System.Drawing.Point(97, 207);
             this.lb_PasswordCA.Name = "lb_PasswordCA";
             this.lb_PasswordCA.Size = new System.Drawing.Size(76, 21);
             this.lb_PasswordCA.TabIndex = 11;
@@ -143,7 +143,7 @@
             this.lb_PasswordLogin.AutoSize = true;
             this.lb_PasswordLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_PasswordLogin.ForeColor = System.Drawing.Color.White;
-            this.lb_PasswordLogin.Location = new System.Drawing.Point(458, 203);
+            this.lb_PasswordLogin.Location = new System.Drawing.Point(458, 207);
             this.lb_PasswordLogin.Name = "lb_PasswordLogin";
             this.lb_PasswordLogin.Size = new System.Drawing.Size(76, 21);
             this.lb_PasswordLogin.TabIndex = 14;
@@ -152,22 +152,22 @@
             // lb_CreateAccount
             // 
             this.lb_CreateAccount.AutoSize = true;
-            this.lb_CreateAccount.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_CreateAccount.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_CreateAccount.ForeColor = System.Drawing.Color.White;
-            this.lb_CreateAccount.Location = new System.Drawing.Point(159, 90);
+            this.lb_CreateAccount.Location = new System.Drawing.Point(142, 90);
             this.lb_CreateAccount.Name = "lb_CreateAccount";
-            this.lb_CreateAccount.Size = new System.Drawing.Size(154, 25);
+            this.lb_CreateAccount.Size = new System.Drawing.Size(178, 30);
             this.lb_CreateAccount.TabIndex = 15;
             this.lb_CreateAccount.Text = "Create Account";
             // 
             // lb_Login
             // 
             this.lb_Login.AutoSize = true;
-            this.lb_Login.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_Login.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_Login.ForeColor = System.Drawing.Color.White;
-            this.lb_Login.Location = new System.Drawing.Point(537, 90);
+            this.lb_Login.Location = new System.Drawing.Point(524, 90);
             this.lb_Login.Name = "lb_Login";
-            this.lb_Login.Size = new System.Drawing.Size(64, 25);
+            this.lb_Login.Size = new System.Drawing.Size(74, 30);
             this.lb_Login.TabIndex = 16;
             this.lb_Login.Text = "Login";
             // 
@@ -209,7 +209,7 @@
             // bt_HomeLogin
             // 
             this.bt_HomeLogin.BackColor = System.Drawing.Color.Orange;
-            this.bt_HomeLogin.Location = new System.Drawing.Point(12, 35);
+            this.bt_HomeLogin.Location = new System.Drawing.Point(12, 32);
             this.bt_HomeLogin.Name = "bt_HomeLogin";
             this.bt_HomeLogin.Size = new System.Drawing.Size(48, 27);
             this.bt_HomeLogin.TabIndex = 21;
