@@ -16,6 +16,7 @@ namespace SWP_Jahresprojekt
         public static List<string> tables = new List<string>();
         public static DataTable dt = new DataTable();
         public static string NTourName, PriceMoney, FinalTeam1, FinalTeam2, Result, Winner, Date, Lan, Place;
+        public static string BundleName, BundlePrice, BundleRarity, BundleDate, BundleVariants;
 
         public static void CreateDB()
         {
@@ -313,28 +314,63 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static DataTable BundleDetails()
+        public static void BundleDetails()
         {
-            DataTable dt = new DataTable();
 
-            try
+            if (Bundles.BundleID.Equals(1))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                cmd.CommandText = "select count(ID) from bundles";
-                int rows = (int)cmd.ExecuteScalar();
+                    cmd.CommandText = "select count(ID) from bundles";
+                    int rows = (int)cmd.ExecuteScalar();
 
-                dt.Clear();
-                dt.Columns.Clear();
-                cmd.CommandText = "select * from bundles where ID = " + rows;
-                dt.Load(cmd.ExecuteReader());
-                conn.Close();
-                return dt;
+                    cmd.CommandText = "select Name from bundles where ID = " + rows;
+                    BundleName = cmd.ExecuteScalar().ToString();
+                    cmd.CommandText = "select Price from bundles where ID = " + rows;
+                    BundlePrice = cmd.ExecuteScalar().ToString();
+                    cmd.CommandText = "select Rarity from bundles where ID = " + rows;
+                    BundleRarity = cmd.ExecuteScalar().ToString();
+                    cmd.CommandText = "select Date from bundles where ID = " + rows;
+                    BundleDate = cmd.ExecuteScalar().ToString();
+                    cmd.CommandText = "select Variants from bundles where ID = " + rows;
+                    BundleVariants = cmd.ExecuteScalar().ToString();
+
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
-            catch (Exception ex)
+            else if (Bundles.BundleID.Equals(2))
             {
-                MessageBox.Show(ex.ToString());
-                return dt;
+                try
+                {
+                    conn.Open();
+
+                    cmd.CommandText = "select count(ID) from bundles";
+                    int rows = (int)cmd.ExecuteScalar();
+                    rows--;
+
+                    cmd.CommandText = "select Name from bundles where ID = " + rows;
+                    BundleName = cmd.ExecuteScalar().ToString();
+                    cmd.CommandText = "select Price from bundles where ID = " + rows;
+                    BundlePrice = cmd.ExecuteScalar().ToString();
+                    cmd.CommandText = "select Rarity from bundles where ID = " + rows;
+                    BundleRarity = cmd.ExecuteScalar().ToString();
+                    cmd.CommandText = "select Date from bundles where ID = " + rows;
+                    BundleDate = cmd.ExecuteScalar().ToString();
+                    cmd.CommandText = "select Variants from bundles where ID = " + rows;
+                    BundleVariants = cmd.ExecuteScalar().ToString();
+
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
         }
     }
