@@ -16,22 +16,13 @@ namespace SWP_Jahresprojekt
         {
             InitializeComponent();
 
-            DataTable dt = new DataTable();
-            
-            dt = SQLInformation.BundleDetails();
+            SQLInformation.BundleDetails();
 
-            if (Bundles.BundleID.Equals(1))
-            {
-                
-                
-               
-                
-            }
-            else if(Bundles.BundleID.Equals(2))
-            {
-
-            }
-            
+            tB_BundleDetailsName.Text = SQLInformation.BundleName;
+            tB_BundleDetailsPrice.Text = SQLInformation.BundlePrice;
+            tB_BundleDetailsRarity.Text = SQLInformation.BundleRarity;
+            tB_BundleDetailsDate.Text = SQLInformation.BundleDate;
+            tB_BundleDetailsVariants.Text = SQLInformation.BundleVariants;
         }
 
         private void bt_back_Click(object sender, EventArgs e)
