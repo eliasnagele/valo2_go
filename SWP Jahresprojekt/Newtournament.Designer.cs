@@ -251,6 +251,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Newtournament";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "+";
             ((System.ComponentModel.ISupportInitialize)(this.pb_mainpic)).EndInit();
             this.ResumeLayout(false);
