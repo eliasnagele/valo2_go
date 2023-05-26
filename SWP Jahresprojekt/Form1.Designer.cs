@@ -43,7 +43,7 @@
             this.bt_tournament.BackColor = System.Drawing.Color.Snow;
             this.bt_tournament.FlatAppearance.BorderSize = 0;
             this.bt_tournament.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bt_tournament.Location = new System.Drawing.Point(32, 165);
+            this.bt_tournament.Location = new System.Drawing.Point(37, 165);
             this.bt_tournament.Name = "bt_tournament";
             this.bt_tournament.Size = new System.Drawing.Size(149, 125);
             this.bt_tournament.TabIndex = 0;
@@ -105,7 +105,7 @@
             this.lb_headline.AutoSize = true;
             this.lb_headline.Font = new System.Drawing.Font("Segoe UI Black", 26F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.lb_headline.ForeColor = System.Drawing.Color.White;
-            this.lb_headline.Location = new System.Drawing.Point(321, -7);
+            this.lb_headline.Location = new System.Drawing.Point(321, -5);
             this.lb_headline.Name = "lb_headline";
             this.lb_headline.Size = new System.Drawing.Size(159, 47);
             this.lb_headline.TabIndex = 5;
@@ -114,9 +114,9 @@
             // btn_Login
             // 
             this.btn_Login.BackColor = System.Drawing.Color.Snow;
-            this.btn_Login.Location = new System.Drawing.Point(713, 12);
+            this.btn_Login.Location = new System.Drawing.Point(726, 12);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(84, 23);
+            this.btn_Login.Size = new System.Drawing.Size(71, 23);
             this.btn_Login.TabIndex = 6;
             this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = false;
@@ -124,9 +124,9 @@
             // 
             // bt_EditTables
             // 
-            this.bt_EditTables.Location = new System.Drawing.Point(713, 411);
+            this.bt_EditTables.Location = new System.Drawing.Point(726, 420);
             this.bt_EditTables.Name = "bt_EditTables";
-            this.bt_EditTables.Size = new System.Drawing.Size(80, 27);
+            this.bt_EditTables.Size = new System.Drawing.Size(71, 22);
             this.bt_EditTables.TabIndex = 7;
             this.bt_EditTables.Text = "Edit Tables";
             this.bt_EditTables.UseVisualStyleBackColor = true;

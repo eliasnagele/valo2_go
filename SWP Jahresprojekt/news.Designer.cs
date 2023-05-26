@@ -42,7 +42,7 @@
             // bt_home
             // 
             this.bt_home.BackColor = System.Drawing.Color.Orange;
-            this.bt_home.Location = new System.Drawing.Point(38, 41);
+            this.bt_home.Location = new System.Drawing.Point(8, 38);
             this.bt_home.Name = "bt_home";
             this.bt_home.Size = new System.Drawing.Size(57, 23);
             this.bt_home.TabIndex = 0;
@@ -53,7 +53,7 @@
             // bt_exit
             // 
             this.bt_exit.BackColor = System.Drawing.Color.Red;
-            this.bt_exit.Location = new System.Drawing.Point(38, 12);
+            this.bt_exit.Location = new System.Drawing.Point(8, 9);
             this.bt_exit.Name = "bt_exit";
             this.bt_exit.Size = new System.Drawing.Size(57, 23);
             this.bt_exit.TabIndex = 2;
@@ -66,11 +66,11 @@
             this.lb_headline.AutoSize = true;
             this.lb_headline.Font = new System.Drawing.Font("Segoe UI Black", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_headline.ForeColor = System.Drawing.Color.White;
-            this.lb_headline.Location = new System.Drawing.Point(293, 31);
+            this.lb_headline.Location = new System.Drawing.Point(342, 28);
             this.lb_headline.Name = "lb_headline";
-            this.lb_headline.Size = new System.Drawing.Size(215, 47);
+            this.lb_headline.Size = new System.Drawing.Size(115, 47);
             this.lb_headline.TabIndex = 6;
-            this.lb_headline.Text = "Überschrift";
+            this.lb_headline.Text = "News";
             // 
             // tb_newsOne
             // 
