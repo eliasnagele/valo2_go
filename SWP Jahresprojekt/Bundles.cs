@@ -19,7 +19,7 @@ namespace SWP_Jahresprojekt
             InitializeComponent();
 
             DataTable dt = new DataTable();
-            SQLInformation.BundlesShowAll(dt);
+            SQLInformation.BundlesShowAll(dt);      //fill the datagridview
             dgv_bundles.DataSource = dt;
         }
 

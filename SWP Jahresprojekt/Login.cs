@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -38,9 +39,9 @@ namespace SWP_Jahresprojekt
             string username = tb_UsernameLogin.Text;
             string password = tb_PasswordLogin.Text;
 
-            userisadmin = SQLInformation.CheckIfUserIsAdmin(username);
-            usernameexist = SQLInformation.CheckIfUsernameExists(username);
-
+            usernameexist = SQLInformation.CheckIfUsernameExists(username);     //checking if the username exists
+            userisadmin = SQLInformation.CheckIfUserIsAdmin(username);          //checking if the user is an admin
+            
             if (usernameexist.Equals(true))
             {
                 bool matchingpassword = SQLInformation.GetPassword(username, password);
@@ -54,7 +55,7 @@ namespace SWP_Jahresprojekt
                 else
                     MessageBox.Show("Wrong username or password");
             }
-        }
+        }       //logging in the user
 
         private void bt_CreateAccount_Click(object sender, EventArgs e)
         {
@@ -62,14 +63,18 @@ namespace SWP_Jahresprojekt
             string password = tb_PasswordCA.Text;
             string confirmpassword = tb_ConfirmPasswordCA.Text;
 
-            if(password == confirmpassword)
+            if(password == confirmpassword)     //checking if the entered passwords match
             {
                 SQLInformation.AddUser(username, password);
+                MessageBox.Show(username.ToUpper() + " wurde erfolgreich erstellt!"); ;
+                tb_UsernameCa.Clear();
+                tb_PasswordCA.Clear();
+                tb_ConfirmPasswordCA.Clear();
             }
-            MessageBox.Show(username + " wurde erfolgreich erstellt!");
-            tb_UsernameCa.Clear();
-            tb_PasswordCA.Clear();
-            tb_ConfirmPasswordCA.Clear();
-        }
+            else
+            {
+                MessageBox.Show("Wrong username or password");
+            }
+        }       //create a new account
     }
 }

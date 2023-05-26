@@ -18,7 +18,7 @@ namespace SWP_Jahresprojekt
 
             SQLInformation.ReadTables();
 
-            for (int i = 0; i < SQLInformation.tables.Count(); i++)
+            for (int i = 0; i < SQLInformation.tables.Count(); i++)         //adding all the tables to a combobox
             {
                 cb_ChooseTable.Items.Add(SQLInformation.tables[i]);
             }
@@ -29,7 +29,7 @@ namespace SWP_Jahresprojekt
             this.Close();
         }
 
-        private void bt_LoadData_Click(object sender, EventArgs e)
+        private void bt_LoadData_Click(object sender, EventArgs e)          //loading the data from the chosen table
         {
             string table = cb_ChooseTable.Text;
 
@@ -37,7 +37,7 @@ namespace SWP_Jahresprojekt
             dtv_ChangeTable.DataSource = dt;
         }
 
-        private void bt_SaveChanges_Click(object sender, EventArgs e)
+        private void bt_SaveChanges_Click(object sender, EventArgs e)       //save the changes made to the table
         {
             SQLInformation.SaveTableChanges();
         }
