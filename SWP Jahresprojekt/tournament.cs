@@ -16,7 +16,7 @@ namespace SWP_Jahresprojekt
         {
             InitializeComponent();
             DataTable dt = new DataTable();
-            SQLInformation.tournamentShowAll(dt);
+            SQLInformation.tournamentShowAll(dt);       //filling the datagridview
             dtv_tournament.DataSource = dt;
         }
 
