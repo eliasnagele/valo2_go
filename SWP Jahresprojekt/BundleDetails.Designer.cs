@@ -28,196 +28,202 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pb_BundleDetails = new System.Windows.Forms.PictureBox();
-            this.lb_BundleDetailsName = new System.Windows.Forms.Label();
-            this.lb_BundleDetailsPrice = new System.Windows.Forms.Label();
-            this.lb_BundleDetailsRarity = new System.Windows.Forms.Label();
-            this.lb_BundleDetailsDate = new System.Windows.Forms.Label();
-            this.lb_BundleDetailsVariants = new System.Windows.Forms.Label();
-            this.tB_BundleDetailsDate = new System.Windows.Forms.TextBox();
-            this.tB_BundleDetailsVariants = new System.Windows.Forms.TextBox();
-            this.tB_BundleDetailsName = new System.Windows.Forms.TextBox();
-            this.tB_BundleDetailsPrice = new System.Windows.Forms.TextBox();
-            this.tB_BundleDetailsRarity = new System.Windows.Forms.TextBox();
-            this.lb_headline = new System.Windows.Forms.Label();
-            this.bt_exit = new System.Windows.Forms.Button();
-            this.bt_back = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_BundleDetails)).BeginInit();
-            this.SuspendLayout();
+            pb_BundleDetails = new PictureBox();
+            lb_BundleDetailsName = new Label();
+            lb_BundleDetailsPrice = new Label();
+            lb_BundleDetailsRarity = new Label();
+            lb_BundleDetailsDate = new Label();
+            lb_BundleDetailsVariants = new Label();
+            tB_BundleDetailsDate = new TextBox();
+            tB_BundleDetailsVariants = new TextBox();
+            tB_BundleDetailsName = new TextBox();
+            tB_BundleDetailsPrice = new TextBox();
+            tB_BundleDetailsRarity = new TextBox();
+            lb_headline = new Label();
+            bt_exit = new Button();
+            bt_back = new Button();
+            ((System.ComponentModel.ISupportInitialize)pb_BundleDetails).BeginInit();
+            SuspendLayout();
             // 
             // pb_BundleDetails
             // 
-            this.pb_BundleDetails.BackColor = System.Drawing.Color.IndianRed;
-            this.pb_BundleDetails.Location = new System.Drawing.Point(12, 72);
-            this.pb_BundleDetails.Name = "pb_BundleDetails";
-            this.pb_BundleDetails.Size = new System.Drawing.Size(776, 152);
-            this.pb_BundleDetails.TabIndex = 0;
-            this.pb_BundleDetails.TabStop = false;
+            pb_BundleDetails.BackColor = Color.IndianRed;
+            pb_BundleDetails.Location = new Point(12, 72);
+            pb_BundleDetails.Name = "pb_BundleDetails";
+            pb_BundleDetails.Size = new Size(776, 152);
+            pb_BundleDetails.TabIndex = 0;
+            pb_BundleDetails.TabStop = false;
             // 
             // lb_BundleDetailsName
             // 
-            this.lb_BundleDetailsName.AutoSize = true;
-            this.lb_BundleDetailsName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_BundleDetailsName.ForeColor = System.Drawing.Color.Snow;
-            this.lb_BundleDetailsName.Location = new System.Drawing.Point(128, 271);
-            this.lb_BundleDetailsName.Name = "lb_BundleDetailsName";
-            this.lb_BundleDetailsName.Size = new System.Drawing.Size(52, 21);
-            this.lb_BundleDetailsName.TabIndex = 1;
-            this.lb_BundleDetailsName.Text = "Name";
+            lb_BundleDetailsName.AutoSize = true;
+            lb_BundleDetailsName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_BundleDetailsName.ForeColor = Color.Snow;
+            lb_BundleDetailsName.Location = new Point(128, 271);
+            lb_BundleDetailsName.Name = "lb_BundleDetailsName";
+            lb_BundleDetailsName.Size = new Size(52, 21);
+            lb_BundleDetailsName.TabIndex = 1;
+            lb_BundleDetailsName.Text = "Name";
             // 
             // lb_BundleDetailsPrice
             // 
-            this.lb_BundleDetailsPrice.AutoSize = true;
-            this.lb_BundleDetailsPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_BundleDetailsPrice.ForeColor = System.Drawing.Color.Snow;
-            this.lb_BundleDetailsPrice.Location = new System.Drawing.Point(128, 328);
-            this.lb_BundleDetailsPrice.Name = "lb_BundleDetailsPrice";
-            this.lb_BundleDetailsPrice.Size = new System.Drawing.Size(44, 21);
-            this.lb_BundleDetailsPrice.TabIndex = 2;
-            this.lb_BundleDetailsPrice.Text = "Price";
+            lb_BundleDetailsPrice.AutoSize = true;
+            lb_BundleDetailsPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_BundleDetailsPrice.ForeColor = Color.Snow;
+            lb_BundleDetailsPrice.Location = new Point(128, 328);
+            lb_BundleDetailsPrice.Name = "lb_BundleDetailsPrice";
+            lb_BundleDetailsPrice.Size = new Size(44, 21);
+            lb_BundleDetailsPrice.TabIndex = 2;
+            lb_BundleDetailsPrice.Text = "Price";
             // 
             // lb_BundleDetailsRarity
             // 
-            this.lb_BundleDetailsRarity.AutoSize = true;
-            this.lb_BundleDetailsRarity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_BundleDetailsRarity.ForeColor = System.Drawing.Color.Snow;
-            this.lb_BundleDetailsRarity.Location = new System.Drawing.Point(128, 390);
-            this.lb_BundleDetailsRarity.Name = "lb_BundleDetailsRarity";
-            this.lb_BundleDetailsRarity.Size = new System.Drawing.Size(51, 21);
-            this.lb_BundleDetailsRarity.TabIndex = 3;
-            this.lb_BundleDetailsRarity.Text = "Rarity";
+            lb_BundleDetailsRarity.AutoSize = true;
+            lb_BundleDetailsRarity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_BundleDetailsRarity.ForeColor = Color.Snow;
+            lb_BundleDetailsRarity.Location = new Point(128, 390);
+            lb_BundleDetailsRarity.Name = "lb_BundleDetailsRarity";
+            lb_BundleDetailsRarity.Size = new Size(51, 21);
+            lb_BundleDetailsRarity.TabIndex = 3;
+            lb_BundleDetailsRarity.Text = "Rarity";
             // 
             // lb_BundleDetailsDate
             // 
-            this.lb_BundleDetailsDate.AutoSize = true;
-            this.lb_BundleDetailsDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_BundleDetailsDate.ForeColor = System.Drawing.Color.Snow;
-            this.lb_BundleDetailsDate.Location = new System.Drawing.Point(418, 271);
-            this.lb_BundleDetailsDate.Name = "lb_BundleDetailsDate";
-            this.lb_BundleDetailsDate.Size = new System.Drawing.Size(42, 21);
-            this.lb_BundleDetailsDate.TabIndex = 4;
-            this.lb_BundleDetailsDate.Text = "Date";
+            lb_BundleDetailsDate.AutoSize = true;
+            lb_BundleDetailsDate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_BundleDetailsDate.ForeColor = Color.Snow;
+            lb_BundleDetailsDate.Location = new Point(418, 271);
+            lb_BundleDetailsDate.Name = "lb_BundleDetailsDate";
+            lb_BundleDetailsDate.Size = new Size(42, 21);
+            lb_BundleDetailsDate.TabIndex = 4;
+            lb_BundleDetailsDate.Text = "Date";
             // 
             // lb_BundleDetailsVariants
             // 
-            this.lb_BundleDetailsVariants.AutoSize = true;
-            this.lb_BundleDetailsVariants.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_BundleDetailsVariants.ForeColor = System.Drawing.Color.Snow;
-            this.lb_BundleDetailsVariants.Location = new System.Drawing.Point(418, 328);
-            this.lb_BundleDetailsVariants.Name = "lb_BundleDetailsVariants";
-            this.lb_BundleDetailsVariants.Size = new System.Drawing.Size(66, 21);
-            this.lb_BundleDetailsVariants.TabIndex = 5;
-            this.lb_BundleDetailsVariants.Text = "Variants";
+            lb_BundleDetailsVariants.AutoSize = true;
+            lb_BundleDetailsVariants.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_BundleDetailsVariants.ForeColor = Color.Snow;
+            lb_BundleDetailsVariants.Location = new Point(418, 328);
+            lb_BundleDetailsVariants.Name = "lb_BundleDetailsVariants";
+            lb_BundleDetailsVariants.Size = new Size(66, 21);
+            lb_BundleDetailsVariants.TabIndex = 5;
+            lb_BundleDetailsVariants.Text = "Variants";
             // 
             // tB_BundleDetailsDate
             // 
-            this.tB_BundleDetailsDate.BackColor = System.Drawing.Color.Black;
-            this.tB_BundleDetailsDate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tB_BundleDetailsDate.Location = new System.Drawing.Point(535, 271);
-            this.tB_BundleDetailsDate.Name = "tB_BundleDetailsDate";
-            this.tB_BundleDetailsDate.ReadOnly = true;
-            this.tB_BundleDetailsDate.Size = new System.Drawing.Size(150, 25);
-            this.tB_BundleDetailsDate.TabIndex = 11;
+            tB_BundleDetailsDate.BackColor = Color.Black;
+            tB_BundleDetailsDate.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            tB_BundleDetailsDate.ForeColor = Color.White;
+            tB_BundleDetailsDate.Location = new Point(535, 271);
+            tB_BundleDetailsDate.Name = "tB_BundleDetailsDate";
+            tB_BundleDetailsDate.ReadOnly = true;
+            tB_BundleDetailsDate.Size = new Size(150, 25);
+            tB_BundleDetailsDate.TabIndex = 11;
             // 
             // tB_BundleDetailsVariants
             // 
-            this.tB_BundleDetailsVariants.BackColor = System.Drawing.Color.Black;
-            this.tB_BundleDetailsVariants.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tB_BundleDetailsVariants.Location = new System.Drawing.Point(535, 328);
-            this.tB_BundleDetailsVariants.Multiline = true;
-            this.tB_BundleDetailsVariants.Name = "tB_BundleDetailsVariants";
-            this.tB_BundleDetailsVariants.ReadOnly = true;
-            this.tB_BundleDetailsVariants.Size = new System.Drawing.Size(150, 87);
-            this.tB_BundleDetailsVariants.TabIndex = 12;
+            tB_BundleDetailsVariants.BackColor = Color.Black;
+            tB_BundleDetailsVariants.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            tB_BundleDetailsVariants.ForeColor = Color.White;
+            tB_BundleDetailsVariants.Location = new Point(535, 328);
+            tB_BundleDetailsVariants.Multiline = true;
+            tB_BundleDetailsVariants.Name = "tB_BundleDetailsVariants";
+            tB_BundleDetailsVariants.ReadOnly = true;
+            tB_BundleDetailsVariants.Size = new Size(150, 87);
+            tB_BundleDetailsVariants.TabIndex = 12;
             // 
             // tB_BundleDetailsName
             // 
-            this.tB_BundleDetailsName.BackColor = System.Drawing.Color.Black;
-            this.tB_BundleDetailsName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tB_BundleDetailsName.Location = new System.Drawing.Point(210, 271);
-            this.tB_BundleDetailsName.Name = "tB_BundleDetailsName";
-            this.tB_BundleDetailsName.ReadOnly = true;
-            this.tB_BundleDetailsName.Size = new System.Drawing.Size(123, 25);
-            this.tB_BundleDetailsName.TabIndex = 13;
+            tB_BundleDetailsName.BackColor = Color.Black;
+            tB_BundleDetailsName.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            tB_BundleDetailsName.ForeColor = Color.White;
+            tB_BundleDetailsName.Location = new Point(210, 271);
+            tB_BundleDetailsName.Name = "tB_BundleDetailsName";
+            tB_BundleDetailsName.ReadOnly = true;
+            tB_BundleDetailsName.Size = new Size(123, 25);
+            tB_BundleDetailsName.TabIndex = 13;
             // 
             // tB_BundleDetailsPrice
             // 
-            this.tB_BundleDetailsPrice.BackColor = System.Drawing.Color.Black;
-            this.tB_BundleDetailsPrice.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tB_BundleDetailsPrice.Location = new System.Drawing.Point(210, 328);
-            this.tB_BundleDetailsPrice.Name = "tB_BundleDetailsPrice";
-            this.tB_BundleDetailsPrice.ReadOnly = true;
-            this.tB_BundleDetailsPrice.Size = new System.Drawing.Size(123, 25);
-            this.tB_BundleDetailsPrice.TabIndex = 14;
+            tB_BundleDetailsPrice.BackColor = Color.Black;
+            tB_BundleDetailsPrice.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            tB_BundleDetailsPrice.ForeColor = Color.White;
+            tB_BundleDetailsPrice.Location = new Point(210, 328);
+            tB_BundleDetailsPrice.Name = "tB_BundleDetailsPrice";
+            tB_BundleDetailsPrice.ReadOnly = true;
+            tB_BundleDetailsPrice.Size = new Size(123, 25);
+            tB_BundleDetailsPrice.TabIndex = 14;
             // 
             // tB_BundleDetailsRarity
             // 
-            this.tB_BundleDetailsRarity.BackColor = System.Drawing.Color.Black;
-            this.tB_BundleDetailsRarity.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tB_BundleDetailsRarity.Location = new System.Drawing.Point(210, 390);
-            this.tB_BundleDetailsRarity.Name = "tB_BundleDetailsRarity";
-            this.tB_BundleDetailsRarity.ReadOnly = true;
-            this.tB_BundleDetailsRarity.Size = new System.Drawing.Size(123, 25);
-            this.tB_BundleDetailsRarity.TabIndex = 15;
+            tB_BundleDetailsRarity.BackColor = Color.Black;
+            tB_BundleDetailsRarity.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            tB_BundleDetailsRarity.ForeColor = Color.White;
+            tB_BundleDetailsRarity.Location = new Point(210, 390);
+            tB_BundleDetailsRarity.Name = "tB_BundleDetailsRarity";
+            tB_BundleDetailsRarity.ReadOnly = true;
+            tB_BundleDetailsRarity.Size = new Size(123, 25);
+            tB_BundleDetailsRarity.TabIndex = 15;
             // 
             // lb_headline
             // 
-            this.lb_headline.AutoSize = true;
-            this.lb_headline.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_headline.ForeColor = System.Drawing.Color.Snow;
-            this.lb_headline.Location = new System.Drawing.Point(280, 8);
-            this.lb_headline.Name = "lb_headline";
-            this.lb_headline.Size = new System.Drawing.Size(248, 45);
-            this.lb_headline.TabIndex = 16;
-            this.lb_headline.Text = "Bundle Details";
+            lb_headline.AutoSize = true;
+            lb_headline.Font = new Font("Segoe UI Black", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_headline.ForeColor = Color.Snow;
+            lb_headline.Location = new Point(280, 8);
+            lb_headline.Name = "lb_headline";
+            lb_headline.Size = new Size(248, 45);
+            lb_headline.TabIndex = 16;
+            lb_headline.Text = "Bundle Details";
             // 
             // bt_exit
             // 
-            this.bt_exit.BackColor = System.Drawing.Color.Red;
-            this.bt_exit.Location = new System.Drawing.Point(14, 7);
-            this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(48, 23);
-            this.bt_exit.TabIndex = 17;
-            this.bt_exit.Text = "Exit";
-            this.bt_exit.UseVisualStyleBackColor = false;
+            bt_exit.BackColor = Color.Red;
+            bt_exit.Location = new Point(14, 7);
+            bt_exit.Name = "bt_exit";
+            bt_exit.Size = new Size(48, 23);
+            bt_exit.TabIndex = 17;
+            bt_exit.Text = "Exit";
+            bt_exit.UseVisualStyleBackColor = false;
+            bt_exit.Click += bt_exit_Click;
             // 
             // bt_back
             // 
-            this.bt_back.BackColor = System.Drawing.Color.Orange;
-            this.bt_back.Location = new System.Drawing.Point(14, 33);
-            this.bt_back.Name = "bt_back";
-            this.bt_back.Size = new System.Drawing.Size(48, 23);
-            this.bt_back.TabIndex = 18;
-            this.bt_back.Text = "Back";
-            this.bt_back.UseVisualStyleBackColor = false;
+            bt_back.BackColor = Color.Orange;
+            bt_back.Location = new Point(14, 33);
+            bt_back.Name = "bt_back";
+            bt_back.Size = new Size(48, 23);
+            bt_back.TabIndex = 18;
+            bt_back.Text = "Back";
+            bt_back.UseVisualStyleBackColor = false;
+            bt_back.Click += bt_back_Click;
             // 
             // BundleDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.bt_back);
-            this.Controls.Add(this.bt_exit);
-            this.Controls.Add(this.lb_headline);
-            this.Controls.Add(this.tB_BundleDetailsRarity);
-            this.Controls.Add(this.tB_BundleDetailsPrice);
-            this.Controls.Add(this.tB_BundleDetailsName);
-            this.Controls.Add(this.tB_BundleDetailsVariants);
-            this.Controls.Add(this.tB_BundleDetailsDate);
-            this.Controls.Add(this.lb_BundleDetailsVariants);
-            this.Controls.Add(this.lb_BundleDetailsDate);
-            this.Controls.Add(this.lb_BundleDetailsRarity);
-            this.Controls.Add(this.lb_BundleDetailsPrice);
-            this.Controls.Add(this.lb_BundleDetailsName);
-            this.Controls.Add(this.pb_BundleDetails);
-            this.Name = "BundleDetails";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BundleDetails";
-            ((System.ComponentModel.ISupportInitialize)(this.pb_BundleDetails)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
+            ClientSize = new Size(800, 450);
+            Controls.Add(bt_back);
+            Controls.Add(bt_exit);
+            Controls.Add(lb_headline);
+            Controls.Add(tB_BundleDetailsRarity);
+            Controls.Add(tB_BundleDetailsPrice);
+            Controls.Add(tB_BundleDetailsName);
+            Controls.Add(tB_BundleDetailsVariants);
+            Controls.Add(tB_BundleDetailsDate);
+            Controls.Add(lb_BundleDetailsVariants);
+            Controls.Add(lb_BundleDetailsDate);
+            Controls.Add(lb_BundleDetailsRarity);
+            Controls.Add(lb_BundleDetailsPrice);
+            Controls.Add(lb_BundleDetailsName);
+            Controls.Add(pb_BundleDetails);
+            Name = "BundleDetails";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "BundleDetails";
+            ((System.ComponentModel.ISupportInitialize)pb_BundleDetails).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

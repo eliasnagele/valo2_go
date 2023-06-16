@@ -18,7 +18,7 @@ namespace SWP_Jahresprojekt
         public static string NTourName, PriceMoney, FinalTeam1, FinalTeam2, Result, Winner, Date, Lan, Place;
         public static string BundleName, BundlePrice, BundleRarity, BundleDate, BundleVariants;
 
-        public static void CreateDB()
+        public static void CreateDB()           //checking if the database already exists; creating db if it doesn`t
         {
             try
             {
@@ -49,24 +49,22 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static void CreateTables()
+        public static void CreateTables()       //creating all the tables
         {
             try
             {
                 conn.Open();
-                cmd.CommandText = "create table bundles (ID int not null primary key identity, Name nvarchar(100), Price int, Rarity nvarchar(100), Date nvarchar(100), Variants nvarchar(100))";
+                cmd.CommandText = "create table bundles (ID int not null primary key identity, BundleNumber int not null, Name nvarchar(100), Price int, Rarity nvarchar(100), Date nvarchar(100), Variants nvarchar(100))";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "create table skins (ID int not null primary key identity, Name nvarchar(100), Price int, Rarity nvarchar(100), BundleID int)";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "create table competition (ID int not null primary key identity, Name nvarchar(100), PriceMoney int, FinalTeam1 nvarchar(100), FinalTeam2 nvarchar(100), Result nvarchar(100), Winner nvarchar(100), Date nvarchar(100), Lan int, Place nvarchar(100))";
+                cmd.CommandText = "create table competition (ID int not null primary key identity, CompetitionNumber int not null, Name nvarchar(100), PriceMoney int, FinalTeam1 nvarchar(100), FinalTeam2 nvarchar(100), Result nvarchar(100), Winner nvarchar(100), Date nvarchar(100), Lan int, Place nvarchar(100))";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "create table login (ID int not null primary key identity, Username nvarchar(100), Password nvarchar(100), Admin int);";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "insert into login (Username, Password, Admin) values ('admin', 'admin', 1);";
-                cmd.ExecuteNonQuery();
-                cmd.CommandText = "insert into competition (Name, PriceMoney, FinalTeam1, FinalTeam2, Result, Winner, Date, Lan, Place) values ('Name', 100, 'FinalesTeam1', 'FinalesTeam2', 'Ergebnis', 'Gewinner', 'Datum', 1, 'Ort');";
-                cmd.ExecuteNonQuery();
                 conn.Close();
+
+                TestData();
             }
             catch (Exception ex)
             {
@@ -74,7 +72,7 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static void ReadTables()
+        public static void ReadTables()         //saving all tables to a list; list is used for the editing the tables
         {
             try
             {
@@ -101,7 +99,7 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static DataTable FillDTV(string table)
+        public static DataTable FillDTV(string table)       //fills the datatable which is then used to edit the tables
         {
             try
             {
@@ -120,7 +118,7 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static void SaveTableChanges()
+        public static void SaveTableChanges()       //saving the changes made to a table
         {
             try
             {
@@ -135,7 +133,7 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static void SkinsshowAll(DataTable dt)
+        public static void SkinsshowAll(DataTable dt)       //show the data from the table 'skins'
         {
             try
             {
@@ -149,7 +147,7 @@ namespace SWP_Jahresprojekt
             catch (Exception ex) { ex.ToString(); }
         }
 
-        public static void BundlesShowAll(DataTable dt)
+        public static void BundlesShowAll(DataTable dt)     //show the data from the table 'bundles'
         {
             try
             {
@@ -166,7 +164,7 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static void AddUser(string username, string password)
+        public static void AddUser(string username, string password)        //add a new user; hash the password
         {
             string salt = BCrypt.GenerateSalt();
             string hashedpassword = BCrypt.HashPassword(password, salt);
@@ -185,7 +183,7 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static void tournamentShowAll(DataTable dt)
+        public static void tournamentShowAll(DataTable dt)      //show the data from the table 'competition'
         {
             try
             {
@@ -199,7 +197,7 @@ namespace SWP_Jahresprojekt
             catch (Exception ex) { ex.ToString(); }
         }
 
-        public static void newTourNfill()
+        public static void newTourNfill()           //get the data from the most recent competition
         {
             try
             {
@@ -240,7 +238,7 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static bool CheckIfUsernameExists(string username)
+        public static bool CheckIfUsernameExists(string username)       //check if the username which the user entered already exists
         {
             bool usernameexist = false;
 
@@ -265,7 +263,7 @@ namespace SWP_Jahresprojekt
             } 
         }
 
-        public static bool CheckIfUserIsAdmin(string username)
+        public static bool CheckIfUserIsAdmin(string username)          //check if the user which is logging in is an admin
         {
             bool userisadmin = false;
 
@@ -288,7 +286,7 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static bool GetPassword(string username, string password)
+        public static bool GetPassword(string username, string password)        //check if the password which the user entered is matching the username
         {
             try
             {
@@ -314,7 +312,7 @@ namespace SWP_Jahresprojekt
             }
         }
 
-        public static void BundleDetails()
+        public static void BundleDetails()          //get the data from the most recent and second most recent bundle
         {
 
             if (Bundles.BundleID.Equals(1))
@@ -323,18 +321,18 @@ namespace SWP_Jahresprojekt
                 {
                     conn.Open();
 
-                    cmd.CommandText = "select count(ID) from bundles";
+                    cmd.CommandText = "select max(BundleNumber) from bundles";
                     int rows = (int)cmd.ExecuteScalar();
 
-                    cmd.CommandText = "select Name from bundles where ID = " + rows;
+                    cmd.CommandText = "select Name from bundles where BundleNumber = " + rows;
                     BundleName = cmd.ExecuteScalar().ToString();
-                    cmd.CommandText = "select Price from bundles where ID = " + rows;
+                    cmd.CommandText = "select Price from bundles where BundleNumber = " + rows;
                     BundlePrice = cmd.ExecuteScalar().ToString();
-                    cmd.CommandText = "select Rarity from bundles where ID = " + rows;
+                    cmd.CommandText = "select Rarity from bundles where BundleNumber = " + rows;
                     BundleRarity = cmd.ExecuteScalar().ToString();
-                    cmd.CommandText = "select Date from bundles where ID = " + rows;
+                    cmd.CommandText = "select Date from bundles where BundleNumber = " + rows;
                     BundleDate = cmd.ExecuteScalar().ToString();
-                    cmd.CommandText = "select Variants from bundles where ID = " + rows;
+                    cmd.CommandText = "select Variants from bundles where BundleNumber = " + rows;
                     BundleVariants = cmd.ExecuteScalar().ToString();
 
                     conn.Close();
@@ -350,19 +348,19 @@ namespace SWP_Jahresprojekt
                 {
                     conn.Open();
 
-                    cmd.CommandText = "select count(ID) from bundles";
+                    cmd.CommandText = "select max(BundleNumber) from bundles";
                     int rows = (int)cmd.ExecuteScalar();
                     rows--;
 
-                    cmd.CommandText = "select Name from bundles where ID = " + rows;
+                    cmd.CommandText = "select Name from bundles where BundleNumber = " + rows;
                     BundleName = cmd.ExecuteScalar().ToString();
-                    cmd.CommandText = "select Price from bundles where ID = " + rows;
+                    cmd.CommandText = "select Price from bundles where BundleNumber = " + rows;
                     BundlePrice = cmd.ExecuteScalar().ToString();
-                    cmd.CommandText = "select Rarity from bundles where ID = " + rows;
+                    cmd.CommandText = "select Rarity from bundles where BundleNumber = " + rows;
                     BundleRarity = cmd.ExecuteScalar().ToString();
-                    cmd.CommandText = "select Date from bundles where ID = " + rows;
+                    cmd.CommandText = "select Date from bundles where BundleNumber = " + rows;
                     BundleDate = cmd.ExecuteScalar().ToString();
-                    cmd.CommandText = "select Variants from bundles where ID = " + rows;
+                    cmd.CommandText = "select Variants from bundles where BundleNumber = " + rows;
                     BundleVariants = cmd.ExecuteScalar().ToString();
 
                     conn.Close();
@@ -373,5 +371,34 @@ namespace SWP_Jahresprojekt
                 }
             }
         }
+
+
+
+
+        public static void TestData()
+        {
+            string salt = BCrypt.GenerateSalt();
+            string hashedpassword = BCrypt.HashPassword("admin", salt);
+
+            try
+            {
+                conn.Open();
+                cmd.CommandText = "insert into bundles values (1, 'Reaver', 7800, 'Epic', '05.11.2019', 'Blue, Red, White, Black')";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "insert into bundles values (2, 'Prime', 7800, 'Epic', '17.03.2020', 'Gold, Blue, Orange, Yellow')";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "insert into login values ('admin', '" + hashedpassword + "', 1)";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "insert into competition (CompetitionNumber, Name, PriceMoney, FinalTeam1, FinalTeam2, Result, Winner, Date, Lan, Place) values (1, 'Test1', 100, 'FinalesTeam1', 'FinalesTeam2', 'Ergebnis', 'Gewinner', 'Datum', 1, 'Ort');";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "insert into competition (CompetitionNumber, Name, PriceMoney, FinalTeam1, FinalTeam2, Result, Winner, Date, Lan, Place) values (2, 'Test2', 100, 'FinalesTeam1', 'FinalesTeam2', 'Ergebnis', 'Gewinner', 'Datum', 1, 'Ort');";
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }       //data to showcase the program
     }
 }

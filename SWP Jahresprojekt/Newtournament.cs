@@ -19,7 +19,7 @@ namespace SWP_Jahresprojekt
             lbl_place.Hide();
             SQLInformation.newTourNfill();
             tb_name.Text = SQLInformation.NTourName.ToString();
-            tb_pricemoney.Text = SQLInformation.PriceMoney.ToString();
+            tb_pricemoney.Text = SQLInformation.PriceMoney.ToString();              //filling the textboxes with the information about the competition
             tb_Date.Text = SQLInformation.Date.ToString();
             tb_Winner.Text = SQLInformation.Winner.ToString();
             if(SQLInformation.Lan == "1")

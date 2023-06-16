@@ -16,7 +16,7 @@ namespace SWP_Jahresprojekt
         {
             InitializeComponent();
             DataTable dt = new DataTable();
-            SQLInformation.SkinsshowAll(dt);
+            SQLInformation.SkinsshowAll(dt);        //filling the datagridview
             dtv_skins.DataSource = dt;
         }
 

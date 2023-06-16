@@ -20,19 +20,19 @@ namespace SWP_Jahresprojekt
 
             tB_BundleDetailsName.Text = SQLInformation.BundleName;
             tB_BundleDetailsPrice.Text = SQLInformation.BundlePrice;
-            tB_BundleDetailsRarity.Text = SQLInformation.BundleRarity;
+            tB_BundleDetailsRarity.Text = SQLInformation.BundleRarity;              //filling the textboxes with the information of the bundles
             tB_BundleDetailsDate.Text = SQLInformation.BundleDate;
             tB_BundleDetailsVariants.Text = SQLInformation.BundleVariants;
-        }
-
-        private void bt_back_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         private void bt_exit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void bt_back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
