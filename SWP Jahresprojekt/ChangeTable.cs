@@ -40,6 +40,7 @@ namespace SWP_Jahresprojekt
         private void bt_SaveChanges_Click(object sender, EventArgs e)       //save the changes made to the table
         {
             SQLInformation.SaveTableChanges();
+            MessageBox.Show("Changes saved");
         }
     }
 }
