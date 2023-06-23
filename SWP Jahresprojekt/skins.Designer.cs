@@ -29,105 +29,104 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(skins));
-            this.bt_home = new System.Windows.Forms.Button();
-            this.bt_exit = new System.Windows.Forms.Button();
-            this.tb_search = new System.Windows.Forms.TextBox();
-            this.lb_Skins = new System.Windows.Forms.Label();
-            this.dtv_skins = new System.Windows.Forms.DataGridView();
-            this.pb_glass = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dtv_skins)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).BeginInit();
-            this.SuspendLayout();
+            bt_home = new Button();
+            bt_exit = new Button();
+            tb_search = new TextBox();
+            lb_Skins = new Label();
+            dtv_skins = new DataGridView();
+            pb_glass = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)dtv_skins).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pb_glass).BeginInit();
+            SuspendLayout();
             // 
             // bt_home
             // 
-            this.bt_home.BackColor = System.Drawing.Color.Orange;
-            this.bt_home.Location = new System.Drawing.Point(12, 41);
-            this.bt_home.Name = "bt_home";
-            this.bt_home.Size = new System.Drawing.Size(53, 23);
-            this.bt_home.TabIndex = 0;
-            this.bt_home.Text = "Home";
-            this.bt_home.UseVisualStyleBackColor = false;
-            this.bt_home.Click += new System.EventHandler(this.bt_home_Click);
+            bt_home.BackColor = Color.Orange;
+            bt_home.Location = new Point(12, 41);
+            bt_home.Name = "bt_home";
+            bt_home.Size = new Size(53, 23);
+            bt_home.TabIndex = 0;
+            bt_home.Text = "Home";
+            bt_home.UseVisualStyleBackColor = false;
+            bt_home.Click += bt_home_Click;
             // 
             // bt_exit
             // 
-            this.bt_exit.BackColor = System.Drawing.Color.Red;
-            this.bt_exit.Location = new System.Drawing.Point(12, 12);
-            this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(53, 23);
-            this.bt_exit.TabIndex = 2;
-            this.bt_exit.Text = "Exit";
-            this.bt_exit.UseVisualStyleBackColor = false;
-            this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
+            bt_exit.BackColor = Color.Red;
+            bt_exit.Location = new Point(12, 12);
+            bt_exit.Name = "bt_exit";
+            bt_exit.Size = new Size(53, 23);
+            bt_exit.TabIndex = 2;
+            bt_exit.Text = "Exit";
+            bt_exit.UseVisualStyleBackColor = false;
+            bt_exit.Click += bt_exit_Click;
             // 
             // tb_search
             // 
-            this.tb_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_search.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_search.Location = new System.Drawing.Point(651, 12);
-            this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(137, 20);
-            this.tb_search.TabIndex = 3;
+            tb_search.BorderStyle = BorderStyle.None;
+            tb_search.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            tb_search.Location = new Point(651, 12);
+            tb_search.Name = "tb_search";
+            tb_search.Size = new Size(137, 20);
+            tb_search.TabIndex = 3;
             // 
             // lb_Skins
             // 
-            this.lb_Skins.AutoSize = true;
-            this.lb_Skins.Font = new System.Drawing.Font("Segoe UI Black", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_Skins.ForeColor = System.Drawing.Color.White;
-            this.lb_Skins.Location = new System.Drawing.Point(336, 9);
-            this.lb_Skins.Name = "lb_Skins";
-            this.lb_Skins.Size = new System.Drawing.Size(111, 47);
-            this.lb_Skins.TabIndex = 6;
-            this.lb_Skins.Text = "Skins";
+            lb_Skins.AutoSize = true;
+            lb_Skins.Font = new Font("Segoe UI Black", 26F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_Skins.ForeColor = Color.White;
+            lb_Skins.Location = new Point(336, 9);
+            lb_Skins.Name = "lb_Skins";
+            lb_Skins.Size = new Size(111, 47);
+            lb_Skins.TabIndex = 6;
+            lb_Skins.Text = "Skins";
             // 
             // dtv_skins
             // 
-            this.dtv_skins.BackgroundColor = System.Drawing.Color.Black;
-            this.dtv_skins.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtv_skins.Location = new System.Drawing.Point(121, 70);
-            this.dtv_skins.Name = "dtv_skins";
-            this.dtv_skins.RowTemplate.Height = 25;
-            this.dtv_skins.Size = new System.Drawing.Size(568, 380);
-            this.dtv_skins.TabIndex = 7;
+            dtv_skins.BackgroundColor = Color.Black;
+            dtv_skins.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtv_skins.Location = new Point(121, 70);
+            dtv_skins.Name = "dtv_skins";
+            dtv_skins.ReadOnly = true;
+            dtv_skins.RowTemplate.Height = 25;
+            dtv_skins.Size = new Size(568, 380);
+            dtv_skins.TabIndex = 7;
             // 
             // pb_glass
             // 
-            this.pb_glass.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pb_glass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.BackgroundImage")));
-            this.pb_glass.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.InitialImage")));
-            this.pb_glass.Location = new System.Drawing.Point(631, 12);
-            this.pb_glass.Name = "pb_glass";
-            this.pb_glass.Size = new System.Drawing.Size(21, 20);
-            this.pb_glass.TabIndex = 8;
-            this.pb_glass.TabStop = false;
+            pb_glass.BackColor = SystemColors.ControlLightLight;
+            pb_glass.BackgroundImage = (Image)resources.GetObject("pb_glass.BackgroundImage");
+            pb_glass.InitialImage = (Image)resources.GetObject("pb_glass.InitialImage");
+            pb_glass.Location = new Point(631, 12);
+            pb_glass.Name = "pb_glass";
+            pb_glass.Size = new Size(21, 20);
+            pb_glass.TabIndex = 8;
+            pb_glass.TabStop = false;
             // 
             // skins
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pb_glass);
-            this.Controls.Add(this.dtv_skins);
-            this.Controls.Add(this.lb_Skins);
-            this.Controls.Add(this.tb_search);
-            this.Controls.Add(this.bt_exit);
-            this.Controls.Add(this.bt_home);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(816, 489);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(816, 489);
-            this.Name = "skins";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "skins";
-            this.Load += new System.EventHandler(this.skins_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtv_skins)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
+            ClientSize = new Size(800, 450);
+            Controls.Add(pb_glass);
+            Controls.Add(dtv_skins);
+            Controls.Add(lb_Skins);
+            Controls.Add(tb_search);
+            Controls.Add(bt_exit);
+            Controls.Add(bt_home);
+            MaximizeBox = false;
+            MaximumSize = new Size(816, 489);
+            MinimizeBox = false;
+            MinimumSize = new Size(816, 489);
+            Name = "skins";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "skins";
+            ((System.ComponentModel.ISupportInitialize)dtv_skins).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pb_glass).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

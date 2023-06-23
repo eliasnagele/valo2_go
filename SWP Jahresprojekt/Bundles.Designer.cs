@@ -29,128 +29,128 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bundles));
-            this.bt_home = new System.Windows.Forms.Button();
-            this.bt_exit = new System.Windows.Forms.Button();
-            this.lb_bundle = new System.Windows.Forms.Label();
-            this.pb_glass = new System.Windows.Forms.PictureBox();
-            this.tb_search = new System.Windows.Forms.TextBox();
-            this.bt_Bundle1 = new System.Windows.Forms.Button();
-            this.bt_Bundle2 = new System.Windows.Forms.Button();
-            this.dgv_bundles = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_bundles)).BeginInit();
-            this.SuspendLayout();
+            bt_home = new Button();
+            bt_exit = new Button();
+            lb_bundle = new Label();
+            pb_glass = new PictureBox();
+            tb_search = new TextBox();
+            bt_Bundle1 = new Button();
+            bt_Bundle2 = new Button();
+            dgv_bundles = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)pb_glass).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_bundles).BeginInit();
+            SuspendLayout();
             // 
             // bt_home
             // 
-            this.bt_home.BackColor = System.Drawing.Color.Orange;
-            this.bt_home.Location = new System.Drawing.Point(12, 35);
-            this.bt_home.Name = "bt_home";
-            this.bt_home.Size = new System.Drawing.Size(49, 25);
-            this.bt_home.TabIndex = 0;
-            this.bt_home.Text = "Home";
-            this.bt_home.UseVisualStyleBackColor = false;
-            this.bt_home.Click += new System.EventHandler(this.bt_home_Click);
+            bt_home.BackColor = Color.Orange;
+            bt_home.Location = new Point(12, 35);
+            bt_home.Name = "bt_home";
+            bt_home.Size = new Size(49, 25);
+            bt_home.TabIndex = 0;
+            bt_home.Text = "Home";
+            bt_home.UseVisualStyleBackColor = false;
+            bt_home.Click += bt_home_Click;
             // 
             // bt_exit
             // 
-            this.bt_exit.BackColor = System.Drawing.Color.Red;
-            this.bt_exit.Location = new System.Drawing.Point(12, 9);
-            this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(49, 23);
-            this.bt_exit.TabIndex = 2;
-            this.bt_exit.Text = "Exit";
-            this.bt_exit.UseVisualStyleBackColor = false;
-            this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
+            bt_exit.BackColor = Color.Red;
+            bt_exit.Location = new Point(12, 9);
+            bt_exit.Name = "bt_exit";
+            bt_exit.Size = new Size(49, 23);
+            bt_exit.TabIndex = 2;
+            bt_exit.Text = "Exit";
+            bt_exit.UseVisualStyleBackColor = false;
+            bt_exit.Click += bt_exit_Click;
             // 
             // lb_bundle
             // 
-            this.lb_bundle.AutoSize = true;
-            this.lb_bundle.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_bundle.ForeColor = System.Drawing.Color.White;
-            this.lb_bundle.Location = new System.Drawing.Point(327, 25);
-            this.lb_bundle.Name = "lb_bundle";
-            this.lb_bundle.Size = new System.Drawing.Size(146, 45);
-            this.lb_bundle.TabIndex = 6;
-            this.lb_bundle.Text = "Bundles";
+            lb_bundle.AutoSize = true;
+            lb_bundle.Font = new Font("Segoe UI Black", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_bundle.ForeColor = Color.White;
+            lb_bundle.Location = new Point(327, 25);
+            lb_bundle.Name = "lb_bundle";
+            lb_bundle.Size = new Size(146, 45);
+            lb_bundle.TabIndex = 6;
+            lb_bundle.Text = "Bundles";
             // 
             // pb_glass
             // 
-            this.pb_glass.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pb_glass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.BackgroundImage")));
-            this.pb_glass.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_glass.InitialImage")));
-            this.pb_glass.Location = new System.Drawing.Point(630, 12);
-            this.pb_glass.Name = "pb_glass";
-            this.pb_glass.Size = new System.Drawing.Size(21, 20);
-            this.pb_glass.TabIndex = 16;
-            this.pb_glass.TabStop = false;
+            pb_glass.BackColor = SystemColors.ControlLightLight;
+            pb_glass.BackgroundImage = (Image)resources.GetObject("pb_glass.BackgroundImage");
+            pb_glass.InitialImage = (Image)resources.GetObject("pb_glass.InitialImage");
+            pb_glass.Location = new Point(630, 12);
+            pb_glass.Name = "pb_glass";
+            pb_glass.Size = new Size(21, 20);
+            pb_glass.TabIndex = 16;
+            pb_glass.TabStop = false;
             // 
             // tb_search
             // 
-            this.tb_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_search.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_search.Location = new System.Drawing.Point(651, 12);
-            this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(137, 20);
-            this.tb_search.TabIndex = 15;
+            tb_search.BorderStyle = BorderStyle.None;
+            tb_search.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            tb_search.Location = new Point(651, 12);
+            tb_search.Name = "tb_search";
+            tb_search.Size = new Size(137, 20);
+            tb_search.TabIndex = 15;
             // 
             // bt_Bundle1
             // 
-            this.bt_Bundle1.BackColor = System.Drawing.Color.Snow;
-            this.bt_Bundle1.Location = new System.Drawing.Point(12, 87);
-            this.bt_Bundle1.Name = "bt_Bundle1";
-            this.bt_Bundle1.Size = new System.Drawing.Size(367, 182);
-            this.bt_Bundle1.TabIndex = 17;
-            this.bt_Bundle1.UseVisualStyleBackColor = false;
-            this.bt_Bundle1.Click += new System.EventHandler(this.bt_Bundle1_Click);
+            bt_Bundle1.BackColor = Color.Snow;
+            bt_Bundle1.Location = new Point(12, 87);
+            bt_Bundle1.Name = "bt_Bundle1";
+            bt_Bundle1.Size = new Size(367, 182);
+            bt_Bundle1.TabIndex = 17;
+            bt_Bundle1.UseVisualStyleBackColor = false;
+            bt_Bundle1.Click += bt_Bundle1_Click;
             // 
             // bt_Bundle2
             // 
-            this.bt_Bundle2.BackColor = System.Drawing.Color.Snow;
-            this.bt_Bundle2.Location = new System.Drawing.Point(421, 87);
-            this.bt_Bundle2.Name = "bt_Bundle2";
-            this.bt_Bundle2.Size = new System.Drawing.Size(367, 182);
-            this.bt_Bundle2.TabIndex = 18;
-            this.bt_Bundle2.UseVisualStyleBackColor = false;
-            this.bt_Bundle2.Click += new System.EventHandler(this.bt_Bundle2_Click);
+            bt_Bundle2.BackColor = Color.Snow;
+            bt_Bundle2.Location = new Point(421, 87);
+            bt_Bundle2.Name = "bt_Bundle2";
+            bt_Bundle2.Size = new Size(367, 182);
+            bt_Bundle2.TabIndex = 18;
+            bt_Bundle2.UseVisualStyleBackColor = false;
+            bt_Bundle2.Click += bt_Bundle2_Click;
             // 
             // dgv_bundles
             // 
-            this.dgv_bundles.BackgroundColor = System.Drawing.Color.Black;
-            this.dgv_bundles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_bundles.Location = new System.Drawing.Point(12, 279);
-            this.dgv_bundles.Name = "dgv_bundles";
-            this.dgv_bundles.RowTemplate.Height = 25;
-            this.dgv_bundles.Size = new System.Drawing.Size(776, 159);
-            this.dgv_bundles.TabIndex = 19;
+            dgv_bundles.BackgroundColor = Color.Black;
+            dgv_bundles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_bundles.Location = new Point(12, 279);
+            dgv_bundles.Name = "dgv_bundles";
+            dgv_bundles.ReadOnly = true;
+            dgv_bundles.RowTemplate.Height = 25;
+            dgv_bundles.Size = new Size(776, 159);
+            dgv_bundles.TabIndex = 19;
             // 
             // Bundles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgv_bundles);
-            this.Controls.Add(this.bt_Bundle2);
-            this.Controls.Add(this.bt_Bundle1);
-            this.Controls.Add(this.pb_glass);
-            this.Controls.Add(this.tb_search);
-            this.Controls.Add(this.lb_bundle);
-            this.Controls.Add(this.bt_exit);
-            this.Controls.Add(this.bt_home);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(816, 489);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(816, 489);
-            this.Name = "Bundles";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bundles";
-            ((System.ComponentModel.ISupportInitialize)(this.pb_glass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_bundles)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dgv_bundles);
+            Controls.Add(bt_Bundle2);
+            Controls.Add(bt_Bundle1);
+            Controls.Add(pb_glass);
+            Controls.Add(tb_search);
+            Controls.Add(lb_bundle);
+            Controls.Add(bt_exit);
+            Controls.Add(bt_home);
+            MaximizeBox = false;
+            MaximumSize = new Size(816, 489);
+            MinimizeBox = false;
+            MinimumSize = new Size(816, 489);
+            Name = "Bundles";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bundles";
+            ((System.ComponentModel.ISupportInitialize)pb_glass).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_bundles).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
